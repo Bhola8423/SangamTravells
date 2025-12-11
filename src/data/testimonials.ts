@@ -8,7 +8,7 @@ export const testimonials: Testimonial[] = [
     name: "Rajesh Kumar",
     location: "Lucknow",
     message:
-      "Sangam Tour & Travels organised our Ayodhya trip perfectly. The hotels were comfortable, driver was punctual and the guide explained everything clearly. Highly recommended!",
+      "Sangam Tour & Travels organised our Ayodhya  driver was punctual and the guide explained everything clearly. Highly recommended!",
     photoUrl:
       "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80",
     date: "2025-09-12",
