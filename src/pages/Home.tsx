@@ -49,7 +49,7 @@ const Home: React.FC = () => {
     <div className="space-y-12">
       {/* HERO CAROUSEL */}
      <section className="full-width-section">
-  <HeroCarousel />
+     <HeroCarousel />
 </section>
 
       {/* SERVICES / TAXI TYPES */}

@@ -2,6 +2,11 @@
 import React from "react";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
+import banner1 from "../../assets/banner2.avif";
+import banner2 from "../../assets/banner3.webp";
+import banner3 from "../../assets/banner4.jpg";
+import banner4 from "../../assets/banner5.avif";
+import banner5 from "../../assets/banner1.webp";
 
 type Slide = {
   id: string;
@@ -22,8 +27,7 @@ const slides: Slide[] = [
     subtitle: "Tailor-made yatra packages • Reliable taxi services • Trusted local guides",
     ctaText: "Explore Tours",
     ctaLink: "/tours",
-    image:
-      "https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?auto=format&fit=crop&w=2000&q=80",
+    image: banner1,
   },
   {
     id: "s2",
@@ -32,18 +36,30 @@ const slides: Slide[] = [
       "Sedan, SUV, Tempo Traveller, Mini Bus & Luxury Coaches — book instantly",
     ctaText: "Book Taxi",
     ctaLink: "/contact",
-    image:
-      "https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=2000&q=80",
-  },
+    image : banner2 },
   {
     id: "s3",
     title: "Guided Pilgrimage Tours with thoughtful itineraries",
     subtitle: "Local guides, smooth darshan timings and comfortable stays",
     ctaText: "View Featured Tours",
     ctaLink: "/tours",
-    image:
-      "https://images.unsplash.com/photo-1583054994298-cc68ddaca862?auto=format&fit=crop&w=2000&q=80",
+    image: banner3, },
+     {
+    id: "s1",
+    title: "Experience soulful journeys — Ayodhya, Varanasi & Prayagraj",
+    subtitle: "Tailor-made yatra packages • Reliable taxi services • Trusted local guides",
+    ctaText: "Explore Tours",
+    ctaLink: "/tours",
+    image: banner4,
   },
+  {
+    id: "s2",
+    title: "Comfortable taxi services for all group sizes",
+    subtitle:
+      "Sedan, SUV, Tempo Traveller, Mini Bus & Luxury Coaches — book instantly",
+    ctaText: "Book Taxi",
+    ctaLink: "/contact",
+    image : banner5 },
 ];
 
 const PrevArrow: React.FC<any> = ({ onClick }) => (
@@ -96,7 +112,7 @@ const HeroCarousel: React.FC = () => {
       <Slider {...settings}>
         {slides.map((s) => (
           <div key={s.id}>
-            <div className="relative h-screen w-fulloverflow-hidden flex items-center">
+            <div className="relative h-screen w-full overflow-hidden flex items-center">
               {/* Background image (cover & center). Use video tag instead if you want a video slide */}
               {s.image && (
                 <img
