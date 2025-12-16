@@ -3,15 +3,8 @@ import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FaBars, FaTimes, FaWhatsapp } from "react-icons/fa";
 
-/**
- * Simple, clean Navbar
- * - Fixed height (72px) so page content can account for it
- * - Transparent + backdrop blur over hero, solid on scroll
- * - Compact mobile menu
- */
-
 const NAV_ITEMS = [
-  { path: "/", label: "Home" },
+  { path: "/", label: "Home", end: true },
   { path: "/tours", label: "Tours" },
   { path: "/services", label: "Services" },
   { path: "/gallery", label: "Gallery" },
@@ -19,16 +12,14 @@ const NAV_ITEMS = [
   { path: "/contact", label: "Contact" },
 ];
 
-const HEADER_HEIGHT = 72; // keep in sync with CSS below
+const HEADER_HEIGHT = 72;
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => {
-      setScrolled(window.scrollY > 32);
-    };
+    const onScroll = () => setScrolled(window.scrollY > 32);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -36,11 +27,10 @@ const Navbar: React.FC = () => {
 
   return (
     <header
-      className={`site-header fixed top-0 left-0 right-0 z-50 h-[72px] transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 h-[72px] transition-all duration-300 ${
         scrolled ? "bg-white/95 shadow-md backdrop-blur-sm" : "bg-transparent"
       }`}
       style={{ height: HEADER_HEIGHT }}
-      role="banner"
     >
       <div className="max-w-7xl mx-auto px-4 md:px-6 h-full flex items-center justify-between">
         {/* Logo */}
@@ -48,32 +38,40 @@ const Navbar: React.FC = () => {
           <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#e76f51] via-[#f4a261] to-[#2a9d8f] flex items-center justify-center text-white font-bold">
             S
           </div>
-          <div
-            className={`${
-              scrolled ? "text-slate-900" : "text-slate-900"
-            } font-semibold`}
-          >
+          <span className="font-semibold text-slate-900">
             Sangam Tour & Travels
-          </div>
+          </span>
         </Link>
 
-        {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-6" aria-label="Primary">
+        {/* Desktop navigation */}
+        <nav className="hidden md:flex items-center gap-6">
           {NAV_ITEMS.map((item) => (
             <NavLink
               key={item.path}
               to={item.path}
+              end={item.end}
               className={({ isActive }) =>
-                `text-sm font-medium transition ${
+                `group relative text-sm font-medium transition-all
+                ${
                   isActive
-                    ? "text-primary"
+                    ? "text-[var(--primary)] font-semibold"
                     : scrolled
                     ? "text-slate-700"
-                    : "text-white/95"
-                } hover:text-primary`
+                    : "text-white"
+                }
+                hover:text-primary`
               }
             >
-              {item.label}
+              {({ isActive }) => (
+                <>
+                  {item.label}
+                  {/* underline indicator */}
+                  <span
+                    className={`absolute -bottom-1 left-0 h-[2px] w-full bg-[var(--primary)] transition-transform duration-300 origin-left
+                      ${isActive ? "scale-x-100" : "scale-x-0"}`}
+                  />
+                </>
+              )}
             </NavLink>
           ))}
         </nav>
@@ -84,14 +82,13 @@ const Navbar: React.FC = () => {
             href="https://wa.me/919876543210"
             target="_blank"
             rel="noreferrer"
-            className={`hidden md:inline-flex items-center gap-2 px-3 py-2 rounded-full font-medium transition bg-emerald-900 text-emerald-700 bg-green-200 `}
-            aria-label="WhatsApp chat"
+            className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full font-medium bg-green-200 text-emerald-800 hover:bg-green-300 transition"
           >
             <FaWhatsapp />
             <span className="hidden lg:inline">WhatsApp</span>
           </a>
 
-          {/* mobile menu button */}
+          {/* Mobile menu toggle */}
           <button
             aria-label="Toggle menu"
             onClick={() => setOpen((s) => !s)}
@@ -106,7 +103,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile menu */}
       <div
-        className={`md:hidden bg-white/95 z-40 transition-max-height duration-300 overflow-hidden ${
+        className={`md:hidden bg-white/95 backdrop-blur z-40 overflow-hidden transition-[max-height] duration-300 ${
           open ? "max-h-[60vh]" : "max-h-0"
         }`}
       >
@@ -115,12 +112,29 @@ const Navbar: React.FC = () => {
             <NavLink
               key={item.path}
               to={item.path}
+              end={item.end}
               onClick={() => setOpen(false)}
-              className="py-2 px-3 rounded-md text-slate-700 hover:bg-slate-100 font-medium"
+              className={({ isActive }) =>
+                `group relative py-2 px-3 rounded-md font-medium transition
+                ${
+                  isActive
+                    ? "bg-primary/10 text-[var(--primary)]"
+                    : "text-slate-700 hover:bg-slate-100"
+                }`
+              }
             >
-              {item.label}
+              {({ isActive }) => (
+                <>
+                  {item.label}
+                  <span
+                    className={`absolute -bottom-1 left-0 h-[2px] w-full bg-[var(--primary)] transition-transform duration-300 origin-left
+                      ${isActive ? "scale-x-100" : "scale-x-0"}`}
+                  />
+                </>
+              )}
             </NavLink>
           ))}
+
           <div className="mt-3">
             <Link
               to="/contact"
