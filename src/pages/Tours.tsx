@@ -2,6 +2,8 @@
 import ReadyToPlan from "../components/common/ReadyToPlan";
 import TourFilters from "../components/common/TourFilters";
 import TourGrid from "../components/common/TourGrid";
+import AyodhyaTourGallery from "../components/tours/AyodhyaToursGallery";
+import FeaturedPackages from "../components/tours/FeaturedPackages";
 
 const Tours = () => {
   return (
@@ -31,12 +33,16 @@ const Tours = () => {
         </div>
       </section>
 
+      <FeaturedPackages />
+      <section className="my-16">
+      <AyodhyaTourGallery />
+      </section>
       {/* TOUR GRID */}
-      <section className="bg-slate-50">
+      {/* <section className="bg-slate-50">
         <div className="container py-12">
           <TourGrid />
         </div>
-      </section>
+      </section> */}
 
       {/* CTA */}
       <ReadyToPlan />
