@@ -1,5 +1,5 @@
 import { useState } from "react";
-import MediaModal from "./MedialModal";
+import MediaModal from "./MediaModal";
 
 const videos = [
   {
@@ -23,11 +23,11 @@ const videos = [
 ];
 
 const VideoShowcase = () => {
-const [media, setMedia] = useState<{ type: "image" | "video"; src: string } | null>(null);
+  const [media, setMedia] = useState<{ type: "image" | "video"; src: string } | null>(null);
 
   return (
     <section className="bg-slate-900 py-16">
-      <div className="container">
+      <div className="container-custom px-6 md:px-12">
         <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-3">
           Watch Our Journeys
         </h2>
@@ -55,7 +55,7 @@ const [media, setMedia] = useState<{ type: "image" | "video"; src: string } | nu
 
               {/* play button */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-xl transition group-hover:scale-110">
+                <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow-xl transition group-hover:scale-110 group-hover:bg-primary group-hover:text-white text-primary text-2xl pl-1">
                   ▶
                 </div>
               </div>
@@ -70,14 +70,14 @@ const [media, setMedia] = useState<{ type: "image" | "video"; src: string } | nu
       </div>
 
       {/* VIDEO MODAL */}
-          {media && (
-              <MediaModal
-                  isOpen={!!media}
-                  type={media.type}
-                  src={media.src}
-                  onClose={() => setMedia(null)}
-              />
-          )}
+      {media && (
+        <MediaModal
+          isOpen={!!media}
+          type={media.type}
+          src={media.src}
+          onClose={() => setMedia(null)}
+        />
+      )}
 
     </section>
   );

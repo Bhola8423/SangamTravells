@@ -1,44 +1,31 @@
 // src/pages/Home.tsx
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaMapMarkedAlt, FaCar, FaUserShield, FaStar, FaArrowRight } from "react-icons/fa";
 import SectionTitle from "../components/common/SectionTitle";
 import TourCard from "../components/common/TourCard";
 import { tours } from "../data/tours";
-import ServiceCard from "../components/common/ServiceCard";
 import HeroCarousel from "../components/common/HeroCarousel";
 import TestimonialsCarousel from "../components/common/TestimonialsCarousel";
 import ReadyToPlan from "../components/common/ReadyToPlan";
+import Image1 from "../assets/image1.jpg"
+import { fleetData } from "../data/fleet";
 
-const taxiTypes = [
+const features = [
   {
-    id: "taxi-sedan",
-    title: "Sedan (Swift / Dzire)",
-    desc: "Comfortable 4-seater cars for couples and small families. Ideal for city drop/pickups.",
-    img: "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=1200&q=80",
+    icon: <FaMapMarkedAlt className="text-4xl text-primary" />,
+    title: "Expert Local Guides",
+    desc: "Experience the history of Ayodhya and Kashi with guides who know every story.",
   },
   {
-    id: "taxi-suv",
-    title: "SUV (Innova / XUV)",
-    desc: "Spacious and reliable 6-7 seater SUVs for family trips and medium groups.",
-    img: "https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1200&q=80",
+    icon: <FaCar className="text-4xl text-primary" />,
+    title: "Premium Fleet",
+    desc: "From Swift Dzire to Luxury Tempo Travellers, we have vehicles for every group size.",
   },
   {
-    id: "taxi-tempo",
-    title: "Tempo Traveller",
-    desc: "Perfect for group yatras — comfortable seating for 9–15 passengers with luggage space.",
-    img: "https://images.unsplash.com/photo-1582719478178-8c8b6f5b4c92?auto=format&fit=crop&w=1200&q=80",
-  },
-  {
-    id: "taxi-minibus",
-    title: "Mini Bus",
-    desc: "Large groups and corporate pilgrimages — seating up to 25 with professional drivers.",
-    img: "https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=1200&q=80",
-  },
-  {
-    id: "taxi-luxury",
-    title: "Luxury Coach",
-    desc: "Premium coaches for big groups and premium packages — recliner seats & onboard amenities.",
-    img: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
+    icon: <FaUserShield className="text-4xl text-primary" />,
+    title: "Safe & Reliable",
+    desc: "verified drivers, 24/7 support, and transparent pricing for your peace of mind.",
   },
 ];
 
@@ -46,114 +33,280 @@ const Home: React.FC = () => {
   const featured = tours.slice(0, 3);
 
   return (
-    <div className="space-y-12">
-      {/* HERO CAROUSEL */}
-     <section className="full-width-section">
-     <HeroCarousel />
-</section>
-
-      {/* SERVICES / TAXI TYPES */}
-      <section className="section pt-10 md:pt-16">
-        <div className="container">
-          <SectionTitle
-            title="Taxi & Travel Services"
-            subtitle="Multiple vehicle types to match every group and budget"
-            align="center"
-          />
-          <div className="mt-6 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            {taxiTypes.map((s) => (
-              <ServiceCard key={s.id} title={s.title} desc={s.desc} img={s.img} />
-            ))}
-          </div>
-
-          <div className="mt-6 text-center">
-            <p className="text-sm text-gray-600 max-w-2xl mx-auto">
-              We provide door-to-door pickup, hourly local sightseeing, intercity
-              transfers and customised pilgrimage packages.
-            </p>
-          </div>
-        </div>
+    <div className="space-y-0">
+      {/* HERO SECTION */}
+      <section className="relative h-screen sm:h-[90vh]">
+        <HeroCarousel />
       </section>
 
-      {/* FEATURED TOURS */}
-      <section className="section bg-white">
-        <div className="container">
-          <SectionTitle
-            title="Featured Pilgrimage Tours"
-            subtitle="Hand-picked popular itineraries"
-            align="center"
-          />
-          <div className="mt-6 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            {featured.map((t) => (
-              <TourCard key={t.id} tour={t} />
-            ))}
+      {/* SEARCH / BOOKING WIDGET (Overlapping Hero) */}
+      <section className="relative z-20 -mt-16 container-custom px-4">
+        <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 flex flex-col md:flex-row gap-4 items-center justify-between border border-gray-100">
+          <div className="flex-1 w-full">
+            <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">
+              Destination
+            </label>
+            <select className="w-full bg-gray-50 border-none rounded-lg p-3 font-medium text-gray-800 focus:ring-2 focus:ring-primary">
+              <option>Ayodhya</option>
+              <option>Varanasi (Kashi)</option>
+              <option>Prayagraj</option>
+            </select>
           </div>
-
-          <div className="mt-6 text-center">
-            <Link to="/tours" className="btn">
-              View All Tours
+          <div className="hidden md:block w-px h-12 bg-gray-200"></div>
+          <div className="flex-1 w-full">
+            <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">
+              Travel Type
+            </label>
+            <select className="w-full bg-gray-50 border-none rounded-lg p-3 font-medium text-gray-800 focus:ring-2 focus:ring-primary">
+              <option>Pilgrimage Tour</option>
+              <option>Taxi Rental</option>
+              <option>Airport Transfer</option>
+            </select>
+          </div>
+          <div className="hidden md:block w-px h-12 bg-gray-200"></div>
+          <div className="w-full md:w-auto">
+            <Link
+              to="/booking"
+              className="btn btn-primary w-full md:w-auto h-12 px-8 flex items-center justify-center gap-2 shadow-primary/30 shadow-lg"
+            >
+              Book Now <FaArrowRight />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* PROMO VIDEO + HOW IT WORKS */}
-      <section className="section pt-10 md:pt-16">
-        <div className="container grid gap-8 grid-cols-1 lg:grid-cols-2 items-center">
-          <div>
-            <SectionTitle title="Watch Our Journey" subtitle="Short promo — see what travellers experienced" align="left" />
-            <div className="rounded-xl overflow-hidden shadow-soft mt-4">
-              <div className="relative" style={{ paddingBottom: "56.25%", height: 0 }}>
-                <iframe
-                  title="Sangam Promo"
-                  src="https://www.youtube.com/embed/ysz5S6PUM-U"
-                  className="absolute inset-0 w-full h-full"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
+      {/* DESTINATIONS / PACKAGES */}
+      <section className="section bg-light mx-10">
+        <div className="container-custom">
+          <SectionTitle
+            title="Spiritual Journeys"
+            subtitle="Explore our most popular pilgrimage packages"
+            align="center"
+          />
+          <div className="mt-12 grid gap-8 grid-cols-1 md:grid-cols-3">
+            {featured.map((t) => (
+              <TourCard key={t.id} tour={t} />
+            ))}
+          </div>
+          <div className="mt-12 text-center">
+            <Link
+              to="/tours"
+              className="inline-flex items-center gap-2 font-semibold text-primary hover:text-primaryDark transition-colors"
+            >
+              View All Packages <FaArrowRight />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FLEET PREVIEW */}
+      <section className="section bg-gradient-to-br from-gray-50 to-orange-50/30 mx-10 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-10 left-10 w-32 h-32 bg-primary/5 rounded-full blur-xl"></div>
+          <div className="absolute bottom-10 right-10 w-40 h-40 bg-secondary/5 rounded-full blur-xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-orange-200/10 rounded-full blur-2xl"></div>
+        </div>
+        <div className="container-custom relative z-10">
+          <SectionTitle
+            title="Premium Fleet"
+            subtitle="Choose the perfect ride for your journey"
+            align="center"
+          />
+
+          <div className="mt-12 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+            {fleetData?.map((vehicle, index) => (
+              <div
+                key={index}
+                className="group relative bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-white/50 backdrop-blur-sm"
+              >
+                {/* Background gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                {/* Image container with overlay */}
+                <div className="relative h-56 overflow-hidden">
+                  <img
+                    src={vehicle.image}
+                    alt={vehicle.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                  {/* Floating badge */}
+                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-primary shadow-lg">
+                    Premium
+                  </div>
+
+                  {/* Hover overlay content */}
+                  <div className="absolute bottom-4 left-4 right-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                    <div className="bg-white/95 backdrop-blur-sm rounded-xl p-3 shadow-lg">
+                      <div className="flex items-center gap-2 text-sm font-semibold text-gray-800">
+                        <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                        Available Now
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-6 relative z-10">
+                  <div className="flex items-start justify-between mb-3">
+                    <div>
+                      <h3 className="font-bold text-xl text-gray-900 mb-1 group-hover:text-primary transition-colors">
+                        {vehicle.name}
+                      </h3>
+                      <p className="text-sm text-gray-600 font-medium">
+                        {vehicle.models}
+                      </p>
+                    </div>
+                    <div className="bg-primary/10 px-3 py-1 rounded-full">
+                      <span className="text-primary font-bold text-sm">{vehicle.pax}</span>
+                    </div>
+                  </div>
+
+                  {/* Features */}
+                  <div className="flex items-center gap-4 mb-4 text-sm text-gray-600">
+                    <div className="flex items-center gap-1">
+                      <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                      AC Available
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                      GPS Tracking
+                    </div>
+                  </div>
+
+                  {/* Pricing */}
+                  <div className="space-y-2">
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm text-gray-600">Ayodhya:</span>
+                      <span className="font-bold text-primary text-lg">{vehicle.priceAyodhya}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm text-gray-600">Delhi:</span>
+                      <span className="font-bold text-gray-800">{vehicle.priceDelhi}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm text-gray-600">Hills:</span>
+                      <span className="font-semibold text-gray-700">{vehicle.hills}</span>
+                    </div>
+                  </div>
+
+                  {/* CTA Button */}
+                  {/* <button className="w-full mt-4 bg-gradient-to-r from-primary to-secondary text-white font-semibold py-3 px-4 rounded-xl hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
+                    Book Now
+                    <FaArrowRight className="text-sm" />
+                  </button> */}
+                </div>
+
+                {/* Decorative elements */}
+                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-primary/10 to-transparent rounded-bl-full"></div>
+                <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-secondary/10 to-transparent rounded-tr-full"></div>
               </div>
-            </div>
+            ))}
           </div>
 
-          <div>
-            <SectionTitle title="How It Works" subtitle="Simple 3-step booking process" align="left" />
-            <ol className="mt-4 space-y-4">
-              <li className="flex gap-4">
-                <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold">1</div>
-                <div>
-                  <h4 className="font-semibold">Choose a tour or taxi</h4>
-                  <p className="text-sm text-gray-600">Browse our packages or tell us your pickup & drop details for a taxi quote.</p>
-                </div>
-              </li>
-              <li className="flex gap-4">
-                <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold">2</div>
-                <div>
-                  <h4 className="font-semibold">Confirm & pay (or pay later)</h4>
-                  <p className="text-sm text-gray-600">Pay online or via bank/UPI. For taxi calls, choose to pay at drop or online.</p>
-                </div>
-              </li>
-              <li className="flex gap-4">
-                <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold">3</div>
-                <div>
-                  <h4 className="font-semibold">Travel with comfort</h4>
-                  <p className="text-sm text-gray-600">We handle local guides, hotel check-ins and smooth pickup/drop timings.</p>
-                </div>
-              </li>
-            </ol>
+          <div className="mt-12 text-center">
+            <Link
+              to="/services"
+              className="inline-flex items-center gap-3 bg-white hover:bg-gray-50 text-primary font-semibold py-4 px-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-primary/20"
+            >
+              Explore All Vehicles
+              <FaArrowRight className="text-sm" />
+            </Link>
+          </div>
+        </div>
+      </section>
 
-            <div className="mt-6">
-              <Link to="/contact" className="btn">Request Custom Plan</Link>
+
+      {/* WHY CHOOSE US */}
+      <section className="py-24 bg-white relative overflow-hidden px-20">
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-orange-50/50 skew-x-12 translate-x-32 z-0" />
+        <div className="container-custom relative z-10">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+              <span className="text-secondary font-bold tracking-wider uppercase text-sm">
+                Why Choose Sangam
+              </span>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold mt-4 mb-6 text-dark leading-tight">
+                We Make Your Yatra <br />
+                <span className="text-primary">Comfortable & Divine</span>
+              </h2>
+              <p className="text-gray-600 text-lg mb-8 leading-relaxed">
+                With verified drivers, clean vehicles, and expert local guides,
+                we ensure your pilgrimage is focused on devotion, not logistics.
+              </p>
+
+              <div className="space-y-8">
+                {features.map((f, i) => (
+                  <div key={i} className="flex gap-4">
+                    <div className="flex-shrink-0 w-16 h-16 rounded-full bg-orange-50 flex items-center justify-center">
+                      {f.icon}
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold text-dark">{f.title}</h4>
+                      <p className="text-gray-600 mt-1">{f.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="absolute inset-0 bg-secondary rounded-2xl transform rotate-3 scale-95 opacity-10"></div>
+              <img
+                src={Image1}
+                alt="Traveller in Ayodhya"
+                className="rounded-2xl shadow-2xl relative z-10 w-full object-cover h-[600px]"
+              />
+              <div className="absolute -bottom-6 -left-6 z-20 bg-white p-6 rounded-xl shadow-xl flex items-center gap-4 max-w-xs">
+                <div className="text-yellow-400 text-3xl">
+                  <FaStar />
+                </div>
+                <div>
+                  <div className="font-bold text-2xl text-dark">4.9/5</div>
+                  <div className="text-sm text-gray-500">
+                    Based on 1200+ Reviews
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* TESTIMONIALS CAROUSEL */}
-      <section className="section bg-white">
-        <div className="container">
-          <SectionTitle title="What Travellers Say" subtitle="Real reviews from our guests" align="center" />
-          <div className="mt-6">
+      {/* VIDEO SECTION */}
+      <section className="py-24 bg-secondary text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+        <div className="container-custom relative z-10 text-center">
+          <SectionTitle
+            title="Experience the Divine Aura"
+            subtitle="What our travellers say"
+            align="center"
+          />
+          <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20">
+            <div className="relative aspect-video">
+              <iframe
+                title="Sangam Promo"
+                src="https://www.youtube.com/embed/uPRdS6RqAc0"
+                className="absolute inset-0 w-full h-full"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>  
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section className="section bg-light">
+        <div className="container-custom">
+          <SectionTitle
+            title="Guest Stories"
+            subtitle="What our travellers say"
+            align="center"
+          />
+          <div className="mt-12 mx-10">
             <TestimonialsCarousel />
           </div>
         </div>

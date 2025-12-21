@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const PackageCard = ({ pkg }: any) => {
   const [open, setOpen] = useState(false);
@@ -43,8 +43,11 @@ const PackageCard = ({ pkg }: any) => {
           </ul>
         )}
 
-        <button className="mt-3 w-full bg-primary text-white py-2 rounded-lg font-semibold hover:bg-primaryDark transition">
-          Book Now
+        <button
+          onClick={() => window.location.href = `/booking?tourId=${pkg.id}`}
+          className="mt-3 w-full bg-primary text-white py-2 rounded-lg font-semibold hover:bg-primaryDark transition shadow-md hover:shadow-lg"
+        >
+          Book This Package
         </button>
       </div>
     </div>

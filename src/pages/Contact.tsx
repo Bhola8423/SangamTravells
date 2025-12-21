@@ -1,145 +1,162 @@
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaPaperPlane } from "react-icons/fa";
 import ReadyToPlan from "../components/common/ReadyToPlan";
 
 const Contact = () => {
   return (
     <>
-      {/* HERO */}
-      <section className="relative bg-gradient-to-r from-[#fff7f2] to-[#f8fffb] my-10 py-10">
-        <div className="container pt-20 pb-24">
-          <h1 className="text-3xl md:text-4xl font-extrabold">
-            Contact Us
+      {/* HERO SECTION */}
+      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1596524430615-b46475ddff6e?auto=format&fit=crop&w=2000&q=80"
+            alt="Contact Us"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-white/5"></div>
+        </div>
+
+        <div className="container-custom relative z-10 text-center">
+          <h1 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6 drop-shadow-2xl">
+            Get in <span className="text-accent-yellow">Touch</span>
           </h1>
-          <p className="mt-4 max-w-2xl text-slate-600 text-base md:text-lg">
-            Have questions or ready to plan your journey?  
+          <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto mb-10 leading-relaxed font-medium drop-shadow-md">
+            Have questions or ready to plan your spiritual journey?
             Reach out to us — we’re always happy to help.
           </p>
         </div>
-
       </section>
 
       {/* CONTACT SECTION */}
-      <section className="container py-14">
-        <div className="grid lg:grid-cols-2 gap-10">
-          
+      <section className="container-custom px-6 md:px-12 py-20">
+        <div className="grid lg:grid-cols-2 gap-16">
+
           {/* LEFT: CONTACT INFO */}
-          <div className="space-y-6">
-            <h2 className="text-2xl font-bold">
-              Get in Touch
-            </h2>
+          <div className="space-y-8">
+            <div>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-sm mb-4">
+                <FaPaperPlane /> 24/7 Support
+              </div>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-secondary mb-4">
+                We'd Love to Hear From You
+              </h2>
+              <p className="text-slate-600 text-lg leading-relaxed">
+                Our team is committed to providing you with the best travel experience. Whether it's a booking inquiry or a custom plan, we are just a message away.
+              </p>
+            </div>
 
-            <p className="text-slate-600">
-              Our team is available 24×7 to assist you with taxi bookings,
-              pilgrimage tours, and customized travel plans.
-            </p>
-
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="grid sm:grid-cols-2 gap-6">
               {/* Call */}
-              <div className="bg-white rounded-xl p-5 shadow-md">
-                <div className="text-primary text-xl mb-2">📞</div>
-                <h3 className="font-semibold">Call Us</h3>
-                <p className="text-sm text-slate-600 mt-1">
-                  +91 98765 43210
-                </p>
+              <div className="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary text-2xl mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+                  <FaPhoneAlt />
+                </div>
+                <h3 className="font-bold text-lg text-secondary mb-1">Call Us</h3>
+                <p className="text-slate-600 font-medium">+91 93361 74751</p>
               </div>
 
               {/* WhatsApp */}
-              <div className="bg-white rounded-xl p-5 shadow-md">
-                <div className="text-green-500 text-xl mb-2">💬</div>
-                <h3 className="font-semibold">WhatsApp</h3>
+              <div className="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group">
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-2xl mb-4 group-hover:bg-green-600 group-hover:text-white transition-colors">
+                  <FaWhatsapp />
+                </div>
+                <h3 className="font-bold text-lg text-secondary mb-1">WhatsApp</h3>
                 <a
-                  href="https://wa.me/919876543210"
+                  href="https://wa.me/919336174751"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-sm text-slate-600 mt-1 inline-block hover:underline"
+                  className="text-primary font-medium hover:underline"
                 >
-                  Chat with us instantly
+                  Chat Instantly
                 </a>
               </div>
 
               {/* Email */}
-              <div className="bg-white rounded-xl p-5 shadow-md">
-                <div className="text-blue-500 text-xl mb-2">✉️</div>
-                <h3 className="font-semibold">Email</h3>
-                <p className="text-sm text-slate-600 mt-1">
-                  support@sangamtourandtravels.com
-                </p>
+              <div className="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group">
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-2xl mb-4 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                  <FaEnvelope />
+                </div>
+                <h3 className="font-bold text-lg text-secondary mb-1">Email</h3>
+                <p className="text-slate-600 font-medium text-sm break-all">sangamtourtravels005@gmail.com</p>
               </div>
 
               {/* Address */}
-              <div className="bg-white rounded-xl p-5 shadow-md">
-                <div className="text-orange-500 text-xl mb-2">📍</div>
-                <h3 className="font-semibold">Office Address</h3>
-                <p className="text-sm text-slate-600 mt-1">
-                  Prayagraj, Uttar Pradesh, India
-                </p>
+              <div className="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group">
+                <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 text-2xl mb-4 group-hover:bg-orange-600 group-hover:text-white transition-colors">
+                  <FaMapMarkerAlt />
+                </div>
+                <h3 className="font-bold text-lg text-secondary mb-1">Office</h3>
+                <p className="text-slate-600 font-medium text-sm">Prayagraj, Uttar Pradesh</p>
               </div>
             </div>
           </div>
 
           {/* RIGHT: CONTACT FORM */}
-          <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
-            <h2 className="text-xl font-bold mb-4">
+          <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-10 border border-slate-100 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-10 -mt-10"></div>
+
+            <h2 className="text-2xl font-serif font-bold text-secondary mb-6 relative z-10">
               Send Us a Message
             </h2>
 
-            <form className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium mb-1">
-                  Full Name
-                </label>
+            <form className="space-y-5 relative z-10">
+              <div className="grid md:grid-cols-2 gap-5">
+                <div className="space-y-2">
+                  <label className="text-sm font-bold text-slate-700 ml-1">Full Name</label>
+                  <input
+                    type="text"
+                    placeholder="John Doe"
+                    className="w-full h-12 px-4 rounded-xl bg-slate-50 border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all font-medium"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-bold text-slate-700 ml-1">Phone Number</label>
+                  <input
+                    type="tel"
+                    placeholder="+91 98765 43210"
+                    className="w-full h-12 px-4 rounded-xl bg-slate-50 border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all font-medium"
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <label className="text-sm font-bold text-slate-700 ml-1">Email Address</label>
                 <input
-                  type="text"
-                  placeholder="Your name"
-                  className="w-full h-11 px-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-primary/30 outline-none"
+                  type="email"
+                  placeholder="john@example.com"
+                  className="w-full h-12 px-4 rounded-xl bg-slate-50 border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all font-medium"
                 />
               </div>
 
-              <div>
-                <label className="block text-sm font-medium mb-1">
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  placeholder="10 digit mobile number"
-                  className="w-full h-11 px-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-primary/30 outline-none"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium mb-1">
-                  Message
-                </label>
+              <div className="space-y-2">
+                <label className="text-sm font-bold text-slate-700 ml-1">Your Message</label>
                 <textarea
                   rows={4}
-                  placeholder="Tell us about your travel plan"
-                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-primary/30 outline-none"
+                  placeholder="Tell us about your travel plans..."
+                  className="w-full p-4 rounded-xl bg-slate-50 border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all font-medium resize-none"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full h-11 rounded-lg bg-[var(--primary)] from-primary to-primaryDark text-white font-semibold shadow hover:scale-105 transition"
+                className="w-full h-14 rounded-xl bg-[#E76F51] text-white font-bold text-lg shadow-lg hover:bg-[#D65A3A] hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-2"
               >
-                Submit Inquiry
+                Send Inquiry <FaPaperPlane className="text-sm" />
               </button>
-
-              <p className="text-xs text-slate-500 text-center mt-2">
-                We usually respond within 30 minutes.
-              </p>
             </form>
           </div>
         </div>
       </section>
 
       {/* MAP */}
-      <section className="container pb-14">
-        <div className="rounded-2xl overflow-hidden shadow-lg">
+      <section className="container-custom px-6 md:px-12 pb-20">
+        <div className="rounded-3xl overflow-hidden shadow-xl border-4 border-white">
           <iframe
             title="Office Location"
-            src="https://www.google.com/maps?q=Prayagraj&output=embed"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14407.608331394464!2d81.86129849999999!3d25.4491062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399aca7885b00001%3A0x1c3a613204961555!2sSangam%20Tour%20and%20Travels!5e0!3m2!1sen!2sin!4v1703000000000!5m2!1sen!2sin"
             width="100%"
-            height="350"
+            height="450"
             loading="lazy"
+            className="grayscale hover:grayscale-0 transition-all duration-700"
           />
         </div>
       </section>

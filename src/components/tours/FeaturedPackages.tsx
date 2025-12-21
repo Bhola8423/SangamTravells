@@ -3,7 +3,7 @@ import { legacyPackages } from "../../data/legacyPackages";
 
 const FeaturedPackages = () => {
   const [openId, setOpenId] = useState<number | null>(null);
-  
+
 
   return (
     <section className="container py-16">

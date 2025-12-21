@@ -17,12 +17,14 @@ const TourCard: React.FC<Props> = ({ tour, rating = 4.7, reviews = 128 }) => {
 
       {/* Image Block */}
       <div className="relative h-52 md:h-56 overflow-hidden">
-        <img
-          src={tour.thumbnailUrl}
-          loading="lazy"
-          alt={tour.name}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-        />
+        <Link to={`/tours/${tour.id}`} className="block w-full h-full">
+          <img
+            src={tour.thumbnailUrl}
+            loading="lazy"
+            alt={tour.name}
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+        </Link>
 
         {/* Top-left badge: Duration */}
         <div className="absolute left-4 top-4 bg-white/90 px-3 py-1 rounded-full text-xs font-semibold text-gray-700 shadow-sm flex items-center gap-1">
@@ -79,7 +81,7 @@ const TourCard: React.FC<Props> = ({ tour, rating = 4.7, reviews = 128 }) => {
 
           {/* BOOK NOW button */}
           <Link
-            to={`/tours/${tour.id}`}
+            to={`/booking?tourId=${tour.id}`}
             className="px-4 py-2 rounded-xl bg-primary text-white text-sm font-semibold shadow-md 
                 transition-all duration-200 hover:bg-primaryDark 
                 hover:shadow-lg hover:-translate-y-0.5"
