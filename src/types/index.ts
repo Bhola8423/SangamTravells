@@ -57,3 +57,27 @@ export interface ContactMessage {
   message?: string;
   createdAt?: string; // ISO timestamp
 }
+export interface SEOSection {
+  title: string;
+  description: string;
+  images?: string[];
+}
+
+export interface SEOPage {
+  slug: string;
+  title: string;
+  metaTitle?: string;
+  metaDescription?: string;
+  category: string;
+  heroImages: string[];
+  sections: SEOSection[];
+  videos?: string[];
+  tourId?: string; // Links to a tour in tours.ts for booking
+  locationKey?: string; // Links to a destination in destinations.ts (e.g. "ayodhya")
+}
+
+export interface SEOCategory {
+  id: string;
+  name: string;
+  pages: { slug: string, title: string }[];
+}

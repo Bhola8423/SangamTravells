@@ -2,27 +2,36 @@
 import React, { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { FaBars, FaTimes, FaWhatsapp } from "react-icons/fa";
+import { seoCategories } from "../../data/seoPages";
 
-const NAV_ITEMS = [
+interface NavItem {
+  path: string;
+  label: string;
+  end?: boolean;
+  dropdown?: {
+    path: string;
+    label: string;
+  }[];
+}
+
+const NAV_ITEMS: NavItem[] = [
   { path: "/", label: "Home", end: true },
   { path: "/tours", label: "Tours" },
+  ...seoCategories.slice(0, 3).map(cat => ({
+    path: `/info/${cat.pages[0]?.slug}`,
+    label: cat.name,
+    dropdown: cat.pages.map(p => ({
+      path: `/info/${p.slug}`,
+      label: p.title
+    }))
+  })),
   {
-    path: "/services",
-    label: "Services",
-    dropdown: [
-      { path: "/services", label: "All Services" },
-      { path: "/taxi/ayodhya", label: "Ayodhya Taxi Service" },
-      { path: "/hotels/ayodhya", label: "Hotels in Ayodhya" },
-    ]
-  },
-  {
-    path: "/destination/ayodhya",
-    label: "Destinations",
-    dropdown: [
-      { path: "/destination/ayodhya", label: "Ayodhya" },
-      { path: "/destination/varanasi", label: "Varanasi" },
-      { path: "/destination/prayagraj", label: "Prayagraj" },
-    ]
+    path: "#",
+    label: "More",
+    dropdown: seoCategories.slice(3).map(cat => ({
+      path: `/info/${cat.pages[0]?.slug}`,
+      label: cat.name
+    }))
   },
   { path: "/gallery", label: "Gallery" },
   { path: "/about", label: "About" },
@@ -43,7 +52,6 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Transparent only on Home when at the very top
   const isTransparent = isHome && !scrolled;
 
   return (
@@ -54,7 +62,6 @@ const Navbar: React.FC = () => {
         }`}
     >
       <div className="w-full px-6 md:px-12 flex items-center justify-between">
-        {/* Logo */}
         <Link to="/" className="flex items-center gap-3 group">
           <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-accent-yellow flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-105 transition-transform">
             S
@@ -64,14 +71,13 @@ const Navbar: React.FC = () => {
           </span>
         </Link>
 
-        {/* Desktop navigation */}
         <nav className="hidden md:flex items-center gap-8">
           {NAV_ITEMS.map((item) => (
             <div key={item.path} className="relative group">
               <NavLink
                 to={item.path}
                 end={item.end}
-                className={({ isActive }) =>
+                className={({ isActive }: { isActive: boolean }) =>
                   `text-sm font-medium tracking-wide transition-all duration-300 relative py-2 flex items-center gap-1
                   ${isActive
                     ? "text-primary font-semibold"
@@ -81,7 +87,7 @@ const Navbar: React.FC = () => {
                   }`
                 }
               >
-                {({ isActive }) => (
+                {({ isActive }: { isActive: boolean }) => (
                   <>
                     {item.label}
                     {item.dropdown && <span className="text-[10px]">▼</span>}
@@ -93,14 +99,13 @@ const Navbar: React.FC = () => {
                 )}
               </NavLink>
 
-              {/* Dropdown Menu */}
               {item.dropdown && (
-                <div className="absolute top-full left-0 w-56 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 overflow-hidden">
+                <div className="absolute top-full left-0 w-64 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 overflow-hidden">
                   {item.dropdown.map((subItem) => (
                     <NavLink
                       key={subItem.path}
                       to={subItem.path}
-                      className={({ isActive }) =>
+                      className={({ isActive }: { isActive: boolean }) =>
                         `block px-5 py-3 text-sm font-medium transition-colors border-b border-gray-50 last:border-0
                         ${isActive ? "bg-primary/5 text-primary" : "text-slate-600 hover:bg-gray-50 hover:text-primary"}`
                       }
@@ -114,7 +119,6 @@ const Navbar: React.FC = () => {
           ))}
         </nav>
 
-        {/* Right actions */}
         <div className="flex items-center gap-4">
           <a
             href="https://wa.me/919919405400"
@@ -130,10 +134,9 @@ const Navbar: React.FC = () => {
             <span className="hidden lg:inline">WhatsApp</span>
           </a>
 
-          {/* Mobile menu toggle */}
           <button
             aria-label="Toggle menu"
-            onClick={() => setOpen((s) => !s)}
+            onClick={() => setOpen((s: boolean) => !s)}
             className={`md:hidden text-2xl p-1 transition-colors ${isTransparent ? "text-white" : "text-secondary"
               }`}
           >
@@ -142,20 +145,19 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
       <div
-        className={`md:hidden absolute top-full left-0 right-0 bg-white shadow-xl transition-all duration-300 origin-top overflow-hidden ${open ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+        className={`md:hidden absolute top-full left-0 right-0 bg-white shadow-xl transition-all duration-300 origin-top overflow-hidden ${open ? "max-h-screen opacity-100 border-t border-gray-100" : "max-h-0 opacity-0"
           }`}
       >
-        <nav className="p-6 flex flex-col gap-4">
+        <nav className="p-6 flex flex-col gap-2">
           {NAV_ITEMS.map((item) => (
-            <div key={item.path}>
+            <div key={item.path} className="border-b border-gray-50 last:border-0 pb-2">
               <NavLink
                 to={item.path}
                 end={item.end}
                 onClick={() => setOpen(false)}
-                className={({ isActive }) =>
-                  `block text-lg font-medium py-2 border-b border-gray-100 flex justify-between items-center
+                className={({ isActive }: { isActive: boolean }) =>
+                  `block text-lg font-medium py-2 flex justify-between items-center
                   ${isActive
                     ? "text-primary border-primary/30 pl-2"
                     : "text-secondary hover:text-primary"
@@ -165,14 +167,14 @@ const Navbar: React.FC = () => {
                 {item.label}
               </NavLink>
               {item.dropdown && (
-                <div className="pl-6 space-y-2 mt-2">
-                  {item.dropdown.map(sub => (
+                <div className="pl-4 space-y-1 mt-1 pb-2">
+                  {item.dropdown.map((sub: { path: string; label: string }) => (
                     <NavLink
                       key={sub.path}
                       to={sub.path}
                       onClick={() => setOpen(false)}
-                      className={({ isActive }) =>
-                        `block text-sm font-medium py-2 text-slate-500 hover:text-primary ${isActive ? 'text-primary' : ''}`
+                      className={({ isActive }: { isActive: boolean }) =>
+                        `block text-sm font-medium py-1.5 text-slate-500 hover:text-primary ${isActive ? 'text-primary' : ''}`
                       }
                     >
                       {sub.label}
@@ -186,7 +188,7 @@ const Navbar: React.FC = () => {
             href="https://wa.me/919919405400"
             target="_blank"
             rel="noreferrer"
-            className="btn btn-primary w-full mt-4 gap-2"
+            className="btn btn-primary w-full mt-4 gap-2 flex items-center justify-center py-3 rounded-xl font-bold"
           >
             <FaWhatsapp /> Chat on WhatsApp
           </a>
