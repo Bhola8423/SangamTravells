@@ -1,7 +1,7 @@
-// src/pages/TourDetails.tsx
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { tours } from "../data/tours";
-import { FaMapMarkerAlt, FaClock, FaRupeeSign, FaCheckCircle, FaTimesCircle, FaArrowLeft, FaUser, FaPhoneAlt, FaUserFriends } from "react-icons/fa";
+import { FaMapMarkerAlt, FaClock, FaRupeeSign, FaCheckCircle, FaTimesCircle, FaArrowLeft } from "react-icons/fa";
+import EmptyState from "../components/common/EmptyState";
 
 const TourDetails = () => {
   const { id } = useParams<{ id: string }>();
@@ -9,10 +9,15 @@ const TourDetails = () => {
   const nav = useNavigate();
 
   if (!tour) return (
-    <div className="min-h-[60vh] flex flex-col items-center justify-center">
-      <h2 className="text-2xl font-bold text-gray-800">Tour not found</h2>
-      <Link to="/tours" className="mt-4 btn btn-primary">Back to Tours</Link>
-    </div>
+    <EmptyState
+      title="Tour Not Found"
+      description="We couldn't find the specific spiritual journey you are looking for. It might have been moved or the link is incorrect."
+      icon={<FaTimesCircle className="text-5xl text-red-200" />}
+      type="error"
+      actionLabel="Back to All Tours"
+      actionLink="/tours"
+      showHomeLink
+    />
   );
 
   return (

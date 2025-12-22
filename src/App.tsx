@@ -12,6 +12,7 @@ import Booking from "./pages/Booking";
 import AyodhyaTaxi from "./pages/AyodhyaTaxi";
 import Destination from "./pages/Destination";
 import AyodhyaHotels from "./pages/AyodhyaHotels";
+import DynamicSEOPage from "./pages/DynamicSEOPage";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/taxi/ayodhya" element={<AyodhyaTaxi />} />
         <Route path="/hotels/ayodhya" element={<AyodhyaHotels />} />
         <Route path="/destination/:city" element={<Destination />} />
+        <Route path="/info/:slug" element={<DynamicSEOPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/booking" element={<Booking />} />
