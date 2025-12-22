@@ -1,8 +1,10 @@
 
 import { useState, useMemo } from "react";
-import { FaCheckCircle, FaStar, FaShieldAlt, FaUserClock } from "react-icons/fa";
+import { FaCheckCircle, FaStar, FaShieldAlt, FaUserClock, FaMapMarkedAlt } from "react-icons/fa";
 import TourCard from "../components/common/TourCard";
 import TourFilters from "../components/common/TourFilters";
+import EmptyState from "../components/common/EmptyState";
+import PageHero from "../components/common/PageHero";
 import ReadyToPlan from "../components/common/ReadyToPlan";
 import { tours } from "../data/tours";
 import { legacyPackages } from "../data/legacyPackages";
@@ -68,42 +70,16 @@ const Tours = () => {
 
   return (
     <>
-      {/* HERO SECTION */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-        {/* Background with overlay */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1598324789736-4861f89564a0?auto=format&fit=crop&w=2000&q=80"
-            alt="Spiritual Journey"
-            className="w-full h-full object-cover"
-          />
-          {/* Darker gradient for better text visibility */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-white/10"></div>
-        </div>
-
-        <div className="container-custom relative z-10 text-center">
-          <h1 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6 drop-shadow-2xl">
-            Sacred Pilgrimages & <br /> <span className="text-accent-yellow">Spiritual Journeys</span>
-          </h1>
-          <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto mb-10 leading-relaxed font-medium drop-shadow-md">
-            Discover thoughtfully curated yatra packages with comfortable travel,
-            expert guides, and transparent pricing. Experience divinity with peace of mind.
-          </p>
-
-          {/* Trust Badges in Hero */}
-          <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-white/95">
-            <div className="flex items-center gap-2 bg-black/30 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-sm">
-              <FaStar className="text-yellow-400" /> 4.8/5 Rated
-            </div>
-            <div className="flex items-center gap-2 bg-black/30 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-sm">
-              <FaShieldAlt className="text-green-400" /> Verified Guides
-            </div>
-            <div className="flex items-center gap-2 bg-black/30 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-sm">
-              <FaUserClock className="text-blue-400" /> 24/7 Support
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        title={<>Sacred Pilgrimages & <br /> <span className="text-accent-yellow">Spiritual Journeys</span></>}
+        subtitle="Discover thoughtfully curated yatra packages with comfortable travel, expert guides, and transparent pricing. Experience divinity with peace of mind."
+        backgroundImage="https://images.unsplash.com/photo-1598324789736-4861f89564a0?auto=format&fit=crop&w=2000&q=80"
+        badges={[
+          <><FaStar className="text-yellow-400" /> 4.8/5 Rated</>,
+          <><FaShieldAlt className="text-green-400" /> Verified Guides</>,
+          <><FaUserClock className="text-blue-400" /> 24/7 Support</>
+        ]}
+      />
 
       {/* FILTER SECTION (Overlapping) */}
       <section className="relative z-20 -mt-24 pb-12 px-4 md:px-0">
@@ -137,18 +113,14 @@ const Tours = () => {
               ))}
             </div>
           ) : (
-            <div className="text-center py-20">
-              <div className="bg-white rounded-2xl shadow-sm p-10 inline-block">
-                <h3 className="text-xl font-bold text-slate-800">No packages found</h3>
-                <p className="text-slate-500 mt-2">Try adjusting your filters to find what you're looking for.</p>
-                <button
-                  onClick={() => setFilters({ location: "All", duration: "All", budget: "All", tourType: "All" })}
-                  className="mt-6 text-primary font-medium hover:underline"
-                >
-                  Clear all filters
-                </button>
-              </div>
-            </div>
+            <EmptyState
+              title="No Journeys Found"
+              description="We couldn't find any packages matching your current filters. Maybe try a broader search or reset your choices?"
+              icon={<FaMapMarkedAlt className="text-4xl text-slate-300" />}
+              actionLabel="Reset All Filters"
+              actionLink="/tours"
+              showHomeLink
+            />
           )}
         </div>
       </section>

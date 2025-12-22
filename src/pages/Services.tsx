@@ -2,47 +2,23 @@ import TaxiServicesGrid from "../components/services/TaxiServicesGrid";
 import HowItWorks from "../components/services/HowItWorks";
 import WhyChooseTaxi from "../components/services/WhyChooseTaxi";
 import ReadyToPlan from "../components/common/ReadyToPlan";
+import PageHero from "../components/common/PageHero";
 import TestimonialsCarousel from "../components/common/TestimonialsCarousel";
 import { FaStar, FaShieldAlt, FaUserTie } from "react-icons/fa";
 
 const Services = () => {
   return (
     <>
-      {/* HERO SECTION */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-        {/* Background with overlay */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=2000&q=80"
-            alt="Luxury Travel"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-white/5"></div>
-        </div>
-
-        <div className="container-custom relative z-10 text-center">
-          <h1 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6 drop-shadow-2xl">
-            Premium Travel & <br /> <span className="text-accent-yellow">Taxi Services</span>
-          </h1>
-          <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto mb-10 leading-relaxed font-medium drop-shadow-md">
-            Experience comfort, reliability, and safety with our premium fleet and expert drivers.
-            Whether it's a local ride or a pilgrimage daily tour, we serve you with a smile.
-          </p>
-
-          {/* Trust Badges in Hero */}
-          <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-white/95">
-            <div className="flex items-center gap-2 bg-black/30 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-sm">
-              <FaStar className="text-yellow-400" /> Top Rated Service
-            </div>
-            <div className="flex items-center gap-2 bg-black/30 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-sm">
-              <FaShieldAlt className="text-green-400" /> Safe & Secure
-            </div>
-            <div className="flex items-center gap-2 bg-black/30 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-sm">
-              <FaUserTie className="text-blue-400" /> Expert Drivers
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        title={<>Premium Travel & <br /> <span className="text-accent-yellow">Taxi Services</span></>}
+        subtitle="Experience comfort, reliability, and safety with our premium fleet and expert drivers. Whether it's a local ride or a pilgrimage daily tour, we serve you with a smile."
+        backgroundImage="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=2000&q=80"
+        badges={[
+          <><FaStar className="text-yellow-400" /> Top Rated Service</>,
+          <><FaShieldAlt className="text-green-400" /> Safe & Secure</>,
+          <><FaUserTie className="text-blue-400" /> Expert Drivers</>
+        ]}
+      />
 
       {/* TAXI SERVICES GRID */}
       <div className="-mt-10 relative z-20">

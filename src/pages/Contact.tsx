@@ -1,30 +1,15 @@
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaPaperPlane } from "react-icons/fa";
 import ReadyToPlan from "../components/common/ReadyToPlan";
+import PageHero from "../components/common/PageHero";
 
 const Contact = () => {
   return (
     <>
-      {/* HERO SECTION */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1596524430615-b46475ddff6e?auto=format&fit=crop&w=2000&q=80"
-            alt="Contact Us"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-white/5"></div>
-        </div>
-
-        <div className="container-custom relative z-10 text-center">
-          <h1 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6 drop-shadow-2xl">
-            Get in <span className="text-accent-yellow">Touch</span>
-          </h1>
-          <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto mb-10 leading-relaxed font-medium drop-shadow-md">
-            Have questions or ready to plan your spiritual journey?
-            Reach out to us — we’re always happy to help.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title={<>Get in <span className="text-accent-yellow">Touch</span></>}
+        subtitle="Have questions or ready to plan your spiritual journey? Reach out to us — we’re always happy to help."
+        backgroundImage="https://images.unsplash.com/photo-1596524430615-b46475ddff6e?auto=format&fit=crop&w=2000&q=80"
+      />
 
       {/* CONTACT SECTION */}
       <section className="container-custom px-6 md:px-12 py-20">

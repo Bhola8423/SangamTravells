@@ -1,6 +1,7 @@
 import { FaCar, FaCheckCircle, FaPhoneAlt, FaMapMarkerAlt, FaRupeeSign } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import ReadyToPlan from "../components/common/ReadyToPlan";
+import PageHero from "../components/common/PageHero";
 
 // Taxi Rate Data
 const taxiRates = [
@@ -54,31 +55,11 @@ const taxiRates = [
 const AyodhyaTaxi = () => {
     return (
         <>
-            {/* HERO SECTION */}
-            <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-                <div className="absolute inset-0 z-0">
-                    <img
-                        src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=2000&q=80"
-                        alt="Ayodhya Taxi Service"
-                        className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-white/5"></div>
-                </div>
-
-                <div className="container-custom relative z-10 text-center">
-                    <h1 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6 drop-shadow-2xl">
-                        Premium <span className="text-accent-yellow">Taxi Services</span> <br /> in Ayodhya
-                    </h1>
-                    <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto mb-10 leading-relaxed font-medium drop-shadow-md">
-                        Safe, reliable, and affordable taxi services for local sightseeing, airport transfers, and outstation trips.
-                    </p>
-                    <div className="flex justify-center gap-4">
-                        <Link to="/booking" className="btn btn-primary h-14 px-8 text-lg shadow-xl shadow-primary/30">
-                            Book a Taxi Now
-                        </Link>
-                    </div>
-                </div>
-            </section>
+            <PageHero
+                title={<>Premium <span className="text-accent-yellow">Taxi Services</span> <br /> in Ayodhya</>}
+                subtitle="Explore the holy city with our reliable taxi services. we provide clean cars, professional drivers, and transparent pricing for all your travel needs."
+                backgroundImage="https://images.unsplash.com/photo-1590050752117-23dc5f5ca6b1?auto=format&fit=crop&w=2000&q=80"
+            />
 
             {/* WHY CHOOSE OUR TAXI */}
             <section className="py-20 bg-white">

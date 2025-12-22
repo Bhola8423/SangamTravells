@@ -61,6 +61,92 @@ const images = [
         category: "Group Tour",
         label: "Happy Group"
     },
+
+    // LOCAL ASSETS
+    {
+        id: 10,
+        src: "/assets/gallery/gallery1.jpg",
+        category: "Pilgrimage",
+        label: "Ayodhya View"
+    },
+    {
+        id: 11,
+        src: "/assets/gallery/gallery2.jpg",
+        category: "Pilgrimage",
+        label: "Saryu River"
+    },
+    {
+        id: 12,
+        src: "/assets/gallery/gallery3.jpg",
+        category: "Pilgrimage",
+        label: "Evening Aarti"
+    },
+    {
+        id: 13,
+        src: "/assets/gallery/gallery4.jpg",
+        category: "Pilgrimage",
+        label: "Sacred Temple"
+    },
+    {
+        id: 14,
+        src: "/assets/gallery/gallery5.jpg",
+        category: "Taxi",
+        label: "Fleet in Action"
+    },
+    {
+        id: 15,
+        src: "/assets/gallery/gallery6.jpg",
+        category: "Taxi",
+        label: "Comfortable Ride"
+    },
+    {
+        id: 16,
+        src: "/assets/gallery/gallery7.jpg",
+        category: "Taxi",
+        label: "Premium Service"
+    },
+    {
+        id: 17,
+        src: "/assets/gallery/gallery8.jpg",
+        category: "Group Tour",
+        label: "Pilgrim Group"
+    },
+    {
+        id: 18,
+        src: "/assets/gallery/gallery9.jpg",
+        category: "Group Tour",
+        label: "Memorable Journey"
+    },
+    {
+        id: 19,
+        src: "/assets/gallery/gallery10.jpg",
+        category: "Group Tour",
+        label: "Happy Travelers"
+    },
+    {
+        id: 20,
+        src: "/assets/gallery/gallery11.jpg",
+        category: "Pilgrimage",
+        label: "Holy Dip"
+    },
+    {
+        id: 21,
+        src: "/assets/gallery/gallery12.jpg",
+        category: "Pilgrimage",
+        label: "Kashi Ghats"
+    },
+    {
+        id: 22,
+        src: "/assets/gallery/gallery13.png",
+        category: "Group Tour",
+        label: "Group Excursion"
+    },
+    {
+        id: 23,
+        src: "/assets/gallery/gallery15.jpg",
+        category: "Group Tour",
+        label: "Travel Diaries"
+    },
 ];
 
 const categories = ["All", "Pilgrimage", "Taxi", "Group Tour"];

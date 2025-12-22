@@ -11,31 +11,17 @@ import {
   FaHotel
 } from "react-icons/fa";
 import ReadyToPlan from "../components/common/ReadyToPlan";
+import PageHero from "../components/common/PageHero";
+import WhyChoose from "../components/common/WhyChoose";
 
 const About = () => {
   return (
     <>
-      {/* HERO SECTION */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=2000&q=80"
-            alt="About Sangam Travels"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-white/5"></div>
-        </div>
-
-        <div className="container-custom relative z-10 text-center">
-          <h1 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6 drop-shadow-2xl">
-            Our Journey of <br /> <span className="text-accent-yellow">Faith & Exploration</span>
-          </h1>
-          <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto mb-10 leading-relaxed font-medium drop-shadow-md">
-            From humble beginnings to becoming a trusted name in pilgrimage and premium travel.
-            We don't just move people; we move hearts.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title={<>Our Journey of <br /> <span className="text-accent-yellow">Faith & Exploration</span></>}
+        subtitle="From humble beginnings to becoming a trusted name in pilgrimage and premium travel. We don't just move people; we move hearts."
+        backgroundImage="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=2000&q=80"
+      />
 
       {/* STORY SECTION */}
       <section className="container-custom px-6 md:px-12 py-20">
@@ -125,35 +111,19 @@ const About = () => {
         </div>
       </section>
 
-      {/* WHY CHOOSE US */}
-      <section className="container-custom px-6 md:px-12 py-20 bg-slate-50">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-800 mb-4">Why Travel With Us?</h2>
-          <p className="text-slate-600 max-w-2xl mx-auto">
-            We understand that every journey is special. Here is why thousands of travelers trust Sangam Tour & Travels.
-          </p>
-        </div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[
-            { title: "Verified Experts", desc: "Our drivers and guides are background-checked and experts in local routes.", icon: <FaUsers /> },
-            { title: "Safety First", desc: "Well-maintained fleet with GPS tracking and emergency support availability.", icon: <FaShieldAlt /> },
-            { title: "Transparency", desc: "No hidden costs. What you see is what you pay. Honest pricing policy.", icon: <FaEye /> },
-            { title: "24/7 Support", desc: "Our support team is always awake to help you, anytime, anywhere.", icon: <FaHeadset /> },
-            { title: "Custom Plans", desc: "We tailor-make itineraries to suit your budget, time, and preferences.", icon: <FaRoute /> },
-            { title: "Best Hotels", desc: "We partner with top-rated hotels to ensure a comfortable stay for you.", icon: <FaHotel /> },
-          ].map((item, idx) => (
-            <div key={idx} className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 group">
-              {/* Fixed hover icon issue by using simpler state */}
-              <div className="w-16 h-16 bg-[#fff7ed] rounded-2xl flex items-center justify-center text-primary text-3xl mb-6 group-hover:bg-[#E76F51] group-hover:text-white transition-all duration-300">
-                {item.icon}
-              </div>
-              <h3 className="text-xl font-bold text-slate-800 mb-3">{item.title}</h3>
-              <p className="text-slate-600 leading-relaxed text-justify">{item.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <WhyChoose
+        title="Why Travel With Us?"
+        subtitle="We understand that every journey is special. Here is why thousands of travelers trust Sangam Tour & Travels."
+        backgroundColor="bg-slate-50"
+        items={[
+          { title: "Verified Experts", desc: "Our drivers and guides are background-checked and experts in local routes.", icon: <FaUsers /> },
+          { title: "Safety First", desc: "Well-maintained fleet with GPS tracking and emergency support availability.", icon: <FaShieldAlt /> },
+          { title: "Transparency", desc: "No hidden costs. What you see is what you pay. Honest pricing policy.", icon: <FaEye /> },
+          { title: "24/7 Support", desc: "Our support team is always awake to help you, anytime, anywhere.", icon: <FaHeadset /> },
+          { title: "Custom Plans", desc: "We tailor-make itineraries to suit your budget, time, and preferences.", icon: <FaRoute /> },
+          { title: "Best Hotels", desc: "We partner with top-rated hotels to ensure a comfortable stay for you.", icon: <FaHotel /> },
+        ]}
+      />
 
       {/* CTA */}
       <ReadyToPlan />
