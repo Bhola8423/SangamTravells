@@ -12,6 +12,7 @@ import {
   FaCcVisa,
   FaCcMastercard,
   FaCcAmazonPay,
+  FaSearch,
 } from "react-icons/fa";
 import SITE from "../../config/site";
 import { Link } from "react-router-dom";
@@ -91,6 +92,11 @@ const Footer: React.FC = () => {
               <a href={SITE.social.whatsapp} aria-label="WhatsApp" target="_blank" rel="noreferrer" className="footer-social">
                 <FaWhatsapp />
               </a>
+              {SITE.social.justdial && (
+                <a href={SITE.social.justdial} aria-label="Justdial" target="_blank" rel="noreferrer" className="footer-social">
+                  <FaSearch />
+                </a>
+              )}
               <a href={SITE.social.twitter} aria-label="Twitter" target="_blank" rel="noreferrer" className="footer-social hidden sm:inline-flex">
                 <FaTwitter />
               </a>
@@ -139,7 +145,11 @@ const Footer: React.FC = () => {
 
             <div className="flex items-center gap-3 text-sm">
               <FaEnvelope className="text-slate-400" />
-              <a href={`mailto:${SITE.email}`} className="text-slate-100 hover:underline">{SITE.email}</a>
+              <div className="flex flex-col">
+                {SITE.emails.map((email) => (
+                  <a key={email} href={`mailto:${email}`} className="text-slate-100 hover:underline">{email}</a>
+                ))}
+              </div>
             </div>
 
             <form onSubmit={subscribe} className="mt-4">
@@ -171,7 +181,7 @@ const Footer: React.FC = () => {
       {/* Legal & bottom */}
       <div className="border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col md:flex-row items-center justify-between gap-3 text-sm text-slate-400">
-          <div>© {new Date().getFullYear()} {SITE.name} • All rights reserved</div>
+          <div>{SITE.copyrightText}</div>
           <div className="flex items-center gap-4">
             <Link to="/privacy" className="hover:text-white">Privacy</Link>
             <Link to="/terms" className="hover:text-white">Terms</Link>

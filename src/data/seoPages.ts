@@ -15,8 +15,13 @@ export const seoPages: SEOPage[] = [
         sections: [
             {
                 title: "Your Trusted Travel Partner in the Holy City",
-                description: "Sangam Travels is dedicated to providing the most comfortable and spiritually enriching journeys in Ayodhya. With years of experience and a deep understanding of the city's heritage, we ensure that your visit to the birthplace of Lord Rama is nothing short of divine.",
+                description: "Sangam Travels is dedicated to providing the most comfortable and spiritually enriching journeys in Ayodhya. With years of experience and a deep understanding of the city's heritage, we ensure that your visit to the birthplace of Lord Rama is nothing short of divine. Ayodhya, situated on the banks of the holy river Saryu, holds a history dating back 4000 years, being the heart of the Kosala Kingdom and the setting for the epic Ramayana.",
                 images: ["/assets/seo/ayodhya_ram_mandir.png"]
+            },
+            {
+                title: "Ancient Heritage & Spiritual Legacy",
+                description: "The history of Ayodhya is intertwined with the broad history of India. From the Aryan inhabitation where the epics of Mahabharata and Puranas were written, to the advent of Lord Buddha in the 1st millennium BC, Ayodhya has remained a beacon of spiritual significance.",
+                images: ["/assets/seo/ayodhya_ghats.jpg"]
             }
         ],
         tourId: "ayodhya-darshan-2d1n"
@@ -35,8 +40,13 @@ export const seoPages: SEOPage[] = [
         sections: [
             {
                 title: "Curated Spiritual Itineraries",
-                description: "Our tour packages are designed to cover all major landmarks including the Ram Janmabhoomi, Hanuman Garhi, Kanak Bhawan, and the serene Saryu River Ghats.",
+                description: "Our tour packages are designed to cover all major landmarks including the Ram Janmabhoomi, Hanuman Garhi, Kanak Bhawan, and the serene Saryu River Ghats. We provide detailed historical context, explaining how Kanak Bhawan was a gift to Devi Sita and how Guptar Ghat witnessed the Jal Samadhi of Lord Rama.",
                 images: ["/assets/seo/ayodhya_ghats.png"]
+            },
+            {
+                title: "The Landmarks of Faith",
+                description: "Explore the newly built Ram Mandir, spiritual home to Lord Rama, and visit the historical Hanuman Garhi, a 10th-century cave temple. Our packages also include visits to the Tomb of Bahu Begum, a notable example of non-Mughal Muslim architecture in Faizabad.",
+                images: ["/assets/seo/ayodhya_ram_mandir.png"]
             }
         ],
         tourId: "ayodhya-darshan-2d1n"
@@ -77,10 +87,10 @@ export const seoPages: SEOPage[] = [
         title: "Complete Tour in Ayodhya - Sightseeing & Darshan",
         category: "ayodhya-main",
         locationKey: "ayodhya",
-        heroImages: ["/assets/seo/ayodhya_ghats.png"],
+        heroImages: ["/assets/allImages/naya_ghat.jpg"],
         metaTitle: "Tour in Ayodhya | Best Itinerary for Ram Mandir",
         metaDescription: "Plan your tour in Ayodhya with Sangam Travels. We offer the best local sightseeing and spiritual experiences.",
-        sections: [{ title: "Comprehensive Tour", description: "From Saryu Aarti to Ram Janmabhoomi Darshan.", images: ["/assets/seo/ayodhya_ghats.png"] }],
+        sections: [{ title: "Comprehensive Tour", description: "From Saryu Aarti to Ram Janmabhoomi Darshan.", images: ["/assets/allImages/guptar_ghat.jpg"] }],
         tourId: "ayodhya-darshan-2d1n"
     },
     {
@@ -99,10 +109,10 @@ export const seoPages: SEOPage[] = [
         title: "Travel Agency Contact Number - Call Sangam Travels",
         category: "contact-intent",
         locationKey: "ayodhya",
-        heroImages: ["/assets/seo/ayodhya_ghats.png"],
+        heroImages: ["/assets/allImages/nageshwarnath_temple.jpg"],
         metaTitle: "Travel Agency Contact Number | Call +91 9919405400",
         metaDescription: "Contact our travel agency for instant booking and travel support. Reach us at +91 9919405400.",
-        sections: [{ title: "Contact Us", description: "Our support team is available 24/7 to assist with your travel plans.", images: ["/assets/seo/ayodhya_ghats.png"] }],
+        sections: [{ title: "Contact Us", description: "Our support team is available 24/7 to assist with your travel plans.", images: ["/assets/allImages/bharat_temple.jpg"] }],
         tourId: "ayodhya-darshan-2d1n"
     },
     {
@@ -176,7 +186,18 @@ export const seoPages: SEOPage[] = [
         heroImages: ["/assets/seo/ayodhya_ram_mandir.png"],
         metaTitle: "Ram Mandir Tour Package Ayodhya | Special Darshan",
         metaDescription: "Exclusive tour package for Ram Mandir Darshan in Ayodhya.",
-        sections: [{ title: "Divine Experience", description: "Experience the grandeur of the new Ram Mandir.", images: ["/assets/seo/ayodhya_ram_mandir.png"] }],
+        sections: [
+            {
+                title: "The Grand Ram Mandir",
+                description: "The Ram Mandir stands as a testament to faith and architectural brilliance at the site of Ram Janmabhoomi. Supervised by the Shri Ram Janmabhoomi Teerth Kshetra, it marks the birthplace of Lord Rama as described in the Ramayana.",
+                images: ["/assets/seo/ayodhya_ram_mandir.png"]
+            },
+            {
+                title: "Sacred Surroundings",
+                description: "Complete your spiritual journey with visits to Kanak Bhawan (Sone-ka-Mandir) and the holy Saryu River, where the morning and evening Aarti create a divine atmosphere.",
+                images: ["/assets/seo/ayodhya_ghats.png"]
+            }
+        ],
         tourId: "ayodhya-darshan-2d1n"
     },
     {
@@ -206,10 +227,10 @@ export const seoPages: SEOPage[] = [
         title: "Tempo Traveller Booking in Ayodhya for Group Tours",
         category: "taxi-services",
         locationKey: "ayodhya",
-        heroImages: ["https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1920&auto=format&fit=crop"],
+        heroImages: ["/assets/allImages/prayagraj_img5.jpg"],
         metaTitle: "Tempo Traveller in Ayodhya | Group Travel Booking",
         metaDescription: "Book luxury tempo travellers in Ayodhya for family and group tours.",
-        sections: [{ title: "Group Comfort", description: "Spacious and comfortable tempo travellers for up to 20 pax.", images: ["https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=800&auto=format&fit=crop"] }],
+        sections: [{ title: "Group Comfort", description: "Spacious and comfortable tempo travellers for up to 20 pax.", images: ["/assets/allImages/prayagraj_img5.jpg"] }],
         tourId: "tempo-traveller"
     },
     {
@@ -217,10 +238,10 @@ export const seoPages: SEOPage[] = [
         title: "Sasta Travel Agency in Ayodhya - Budget Pilgrimage",
         category: "budget-sasta",
         locationKey: "ayodhya",
-        heroImages: ["/assets/seo/ayodhya_ghats.png"],
+        heroImages: ["/assets/allImages/darbhanga_ghat.jpg"],
         metaTitle: "Sasta Travel Agency Ayodhya | Low Cost Tour Packs",
         metaDescription: "Find the most sasta and reliable travel agency in Ayodhya. Budget friendly tours.",
-        sections: [{ title: "Affordable Pilgrimage", description: "Divine soul, budget price.", images: ["/assets/seo/ayodhya_ghats.png"] }],
+        sections: [{ title: "Affordable Pilgrimage", description: "Divine soul, budget price.", images: ["/assets/allImages/guptar_ghat.jpg"] }],
         tourId: "ayodhya-darshan-2d1n"
     },
     {
@@ -228,10 +249,10 @@ export const seoPages: SEOPage[] = [
         title: "Cheapest Travel Agency in Ayodhya - Guaranteed Best Rates",
         category: "budget-sasta",
         locationKey: "ayodhya",
-        heroImages: ["/assets/seo/ayodhya_ghats.png"],
+        heroImages: ["/assets/allImages/tulsi_udyan_temple.jpg"],
         metaTitle: "Cheapest Travel Agency Ayodhya | Sangam Travels",
         metaDescription: "Get the cheapest rates for taxi and hotel booking in Ayodhya with us.",
-        sections: [{ title: "Value for Money", description: "Best service at the lowest price.", images: ["/assets/seo/ayodhya_ghats.png"] }],
+        sections: [{ title: "Value for Money", description: "Best service at the lowest price.", images: ["/assets/allImages/durga_temple.jpg"] }],
         tourId: "ayodhya-darshan-2d1n"
     },
     {
@@ -261,10 +282,10 @@ export const seoPages: SEOPage[] = [
         title: "Faizabad Tour and Travels - Local Sightseeing Experts",
         category: "local-hyperlocal",
         locationKey: "ayodhya",
-        heroImages: ["/assets/seo/ayodhya_ghats.png"],
+        heroImages: ["/assets/allImages/dwarikadhessh_temple.jpg"],
         metaTitle: "Faizabad Tour and Travels | Local Car Rental",
         metaDescription: "Best tour and travel services in Faizabad and Ayodhya region.",
-        sections: [{ title: "Local Tours", description: "Explore Faizabad's rich history alongside Ayodhya.", images: ["/assets/seo/ayodhya_ghats.png"] }],
+        sections: [{ title: "Local Tours", description: "Explore Faizabad's rich history alongside Ayodhya.", images: ["/assets/allImages/akbar_fort.jpg"] }],
         tourId: "ayodhya-darshan-2d1n"
     },
     {
@@ -283,10 +304,10 @@ export const seoPages: SEOPage[] = [
         title: "Deepotsav Ayodhya Tour - Experience the Festival of Lights",
         category: "seasonal",
         locationKey: "ayodhya",
-        heroImages: ["https://images.unsplash.com/photo-1605367031756-3a0597843477?q=80&w=1920&auto=format&fit=crop"],
+        heroImages: ["/assets/allImages/naya_ghat.jpg"],
         metaTitle: "Ayodhya Deepotsav Tour | Diwali Special Packages",
         metaDescription: "Witness the record-breaking Deepotsav in Ayodhya with Sangam Travels.",
-        sections: [{ title: "Deepotsav", description: "Million of diyas lighting up the Saryu ghats.", images: ["https://images.unsplash.com/photo-1605367031756-3a0597843477?q=80&w=800&auto=format&fit=crop"] }],
+        sections: [{ title: "Deepotsav", description: "Million of diyas lighting up the Saryu ghats.", images: ["/assets/allImages/naya_ghat.jpg"] }],
         tourId: "ayodhya-darshan-2d1n"
     },
     {
@@ -305,10 +326,10 @@ export const seoPages: SEOPage[] = [
         title: "Ayodhya Tour and Travels - Best Local Tour Operators",
         category: "ayodhya-main",
         locationKey: "ayodhya",
-        heroImages: ["/assets/seo/ayodhya_ghats.png"],
+        heroImages: ["/assets/allImages/hanuman_garhi.jpg"],
         metaTitle: "Ayodhya Tour and Travels | Reliable Local Tour Operators",
         metaDescription: "Expert tour and travel services in Ayodhya. Explore the holy city with Sangam Travels.",
-        sections: [{ title: "Local Expertise", description: "Experience Ayodhya with people who know it best.", images: ["/assets/seo/ayodhya_ghats.png"] }],
+        sections: [{ title: "Local Expertise", description: "Experience Ayodhya with people who know it best.", images: ["/assets/allImages/kanak_bhawan.jpg"] }],
         tourId: "ayodhya-darshan-2d1n"
     },
     {
@@ -349,10 +370,10 @@ export const seoPages: SEOPage[] = [
         title: "Travel Agency in Manapur Ayodhya - Sangam Travels",
         category: "local-hyperlocal",
         locationKey: "ayodhya",
-        heroImages: ["/assets/seo/ayodhya_ghats.png"],
+        heroImages: ["/assets/allImages/sankat_mochan_hanuman_mandir.jpg"],
         metaTitle: "Travel Agency Manapur Ayodhya | Local Service",
         metaDescription: "Serving the Manapur area of Ayodhya with premium travel and taxi services.",
-        sections: [{ title: "Manapur Special", description: "Dedicated services for visitors near Manapur.", images: ["/assets/seo/ayodhya_ghats.png"] }],
+        sections: [{ title: "Manapur Special", description: "Dedicated services for visitors near Manapur.", images: ["/assets/allImages/hanuman_garhi2.jpg"] }],
         tourId: "ayodhya-darshan-2d1n"
     },
     {
@@ -371,10 +392,10 @@ export const seoPages: SEOPage[] = [
         title: "Travel Agency in Ayodhya Contact Number - Sangam Travels",
         category: "contact-intent",
         locationKey: "ayodhya",
-        heroImages: ["/assets/seo/ayodhya_ghats.png"],
+        heroImages: ["/assets/allImages/prayagraj_img3.jpg"],
         metaTitle: "Travel Agency in Ayodhya Contact Number | Call +91 9919405400",
         metaDescription: "Need a travel agent in Ayodhya? Call or WhatsApp Sangam Travels at +91 9919405400 for instant booking and support.",
-        sections: [{ title: "Direct Contact", description: "Get in touch with our travel experts for personalized itineraries and instant bookings.", images: ["/assets/seo/ayodhya_ghats.png"] }],
+        sections: [{ title: "Direct Contact", description: "Get in touch with our travel experts for personalized itineraries and instant bookings.", images: ["/assets/allImages/prayagraj_img4.jpg"] }],
         tourId: "ayodhya-darshan-2d1n"
     },
     {
@@ -393,10 +414,10 @@ export const seoPages: SEOPage[] = [
         title: "Affordable Ayodhya Tour Packages for Families & Solo Travelers",
         category: "budget-sasta",
         locationKey: "ayodhya",
-        heroImages: ["/assets/seo/ayodhya_ghats.png"],
+        heroImages: ["/assets/allImages/varanasi_img2.jpg"],
         metaTitle: "Affordable Ayodhya Tour Packages | Best Value for Money",
         metaDescription: "Spiritual journeys shouldn't be expensive. Explore our affordable tour packages designed for every budget.",
-        sections: [{ title: "Value for Money", description: "Quality stays and comfortable travel at the most competitive rates.", images: ["/assets/seo/ayodhya_ghats.png"] }],
+        sections: [{ title: "Value for Money", description: "Quality stays and comfortable travel at the most competitive rates.", images: ["/assets/allImages/taj_mahal.jpg"] }],
         tourId: "ayodhya-darshan-2d1n"
     },
     {
@@ -404,10 +425,10 @@ export const seoPages: SEOPage[] = [
         title: "Pocket Friendly Ayodhya Trip - Budget Planning Guide",
         category: "budget-sasta",
         locationKey: "ayodhya",
-        heroImages: ["/assets/seo/ayodhya_ghats.png"],
+        heroImages: ["/assets/allImages/khushro_bagh.jpg"],
         metaTitle: "Pocket Friendly Ayodhya Trip | Budget Itineraries",
         metaDescription: "Plan your trip to Ayodhya without breaking the bank. Pocket-friendly services for pilgrims.",
-        sections: [{ title: "Economics of Devotion", description: "We believe spiritual experiences should be accessible to everyone.", images: ["/assets/seo/ayodhya_ghats.png"] }],
+        sections: [{ title: "Economics of Devotion", description: "We believe spiritual experiences should be accessible to everyone.", images: ["/assets/allImages/chandrasekhar_azad_park.jpg"] }],
         tourId: "ayodhya-darshan-2d1n"
     },
     {
@@ -503,10 +524,10 @@ export const seoPages: SEOPage[] = [
         title: "Sangam Tour and Travels Contact Number - Office & Support",
         category: "contact-intent",
         locationKey: "ayodhya",
-        heroImages: ["/assets/seo/ayodhya_ghats.png"],
+        heroImages: ["/assets/allImages/prayagraj_img5.jpg"],
         metaTitle: "Sangam Tour and Travels Contact Number | Ayodhya +91 9919405400",
         metaDescription: "Contact Sangam Travels (Sangam Tour and Travels) in Ayodhya for the best tour and taxi deals. Call us at +91 9919405400.",
-        sections: [{ title: "Official Contact", description: "Our team is ready to assist you with all your travel planning needs.", images: ["/assets/seo/ayodhya_ghats.png"] }],
+        sections: [{ title: "Official Contact", description: "Our team is ready to assist you with all your travel planning needs.", images: ["/assets/allImages/chitrakoot.jpg"] }],
         tourId: "ayodhya-darshan-2d1n"
     },
     {
@@ -547,10 +568,10 @@ export const seoPages: SEOPage[] = [
         title: "Ayodhya Tourist Places Tour - Multi-Day Itineraries",
         category: "ayodhya-main",
         locationKey: "ayodhya",
-        heroImages: ["/assets/seo/ayodhya_ghats.png"],
+        heroImages: ["/assets/allImages/tomb_of_bahu_beham.jpg"],
         metaTitle: "Ayodhya Tourist Places Tour | Detailed Site Map & Info",
         metaDescription: "Visit all the key tourist places in Ayodhya with our curated city tour packages.",
-        sections: [{ title: "Key Landmarks", description: "Detailed visits to Hanuman Garhi, Kanak Bhawan, and more.", images: ["/assets/seo/ayodhya_ghats.png"] }],
+        sections: [{ title: "Key Landmarks", description: "Detailed visits to Hanuman Garhi, Kanak Bhawan, and more.", images: ["/assets/allImages/naya_ghat.jpg"] }],
         tourId: "ayodhya-darshan-2d1n"
     },
     {
@@ -602,10 +623,10 @@ export const seoPages: SEOPage[] = [
         title: "Budget Ayodhya Darshan Tour - Affordable Spiritual Trip",
         category: "budget-sasta",
         locationKey: "ayodhya",
-        heroImages: ["/assets/seo/ayodhya_ghats.png"],
+        heroImages: ["/assets/allImages/vishwanath_temple.jpg"],
         metaTitle: "Budget Ayodhya Darshan Tour | Economical Plans",
         metaDescription: "Experience the divinity of Ayodhya at the most affordable price points.",
-        sections: [{ title: "Economical Darshan", description: "Quality service at prices that make sense.", images: ["/assets/seo/ayodhya_ghats.png"] }],
+        sections: [{ title: "Economical Darshan", description: "Quality service at prices that make sense.", images: ["/assets/allImages/durga_temple.jpg"] }],
         tourId: "ayodhya-darshan-2d1n"
     },
     {
@@ -624,10 +645,10 @@ export const seoPages: SEOPage[] = [
         title: "Ayodhya Tour Booking Contact - Instant Help",
         category: "contact-intent",
         locationKey: "ayodhya",
-        heroImages: ["/assets/seo/ayodhya_ghats.png"],
+        heroImages: ["/assets/allImages/dwarikadhessh_temple.jpg"],
         metaTitle: "Ayodhya Tour Booking Contact | Support +91 9919405400",
         metaDescription: "Contact our team for quick Ayodhya tour booking and itinerary reviews.",
-        sections: [{ title: "Booking Support", description: "Our experts are available to help you book your trip.", images: ["/assets/seo/ayodhya_ghats.png"] }],
+        sections: [{ title: "Booking Support", description: "Our experts are available to help you book your trip.", images: ["/assets/allImages/sankat_mochan_hanuman_mandir.jpg"] }],
         tourId: "ayodhya-darshan-2d1n"
     },
     {
@@ -668,10 +689,10 @@ export const seoPages: SEOPage[] = [
         title: "Kumbh Mela Tour Package Prayagraj - Mahakumbh 2025",
         category: "cities",
         locationKey: "prayagraj",
-        heroImages: ["https://images.unsplash.com/photo-1622303036894-3be88349463e?q=80&w=1920&auto=format&fit=crop"],
+        heroImages: ["/assets/allImages/prayagraj_img4.jpg"],
         metaTitle: "Kumbh Mela Prayagraj Tour Package | Stay & Shahi Snan",
         metaDescription: "Special packages for the Kumbh Mela in Prayagraj. Tent bookings and transport included.",
-        sections: [{ title: "Mahakumbh Special", description: "Be part of the world's largest religious gathering.", images: ["https://images.unsplash.com/photo-1622303036894-3be88349463e?q=80&w=800&auto=format&fit=crop"] }],
+        sections: [{ title: "Mahakumbh Special", description: "Be part of the world's largest religious gathering.", images: ["/assets/allImages/prayagraj_img4.jpg"] }],
         tourId: "prayagraj-sangam-1d"
     },
     {
@@ -712,10 +733,10 @@ export const seoPages: SEOPage[] = [
         title: "Best Ayodhya Tour Package for Families - Kid & Elderly Friendly",
         category: "ayodhya-main",
         locationKey: "ayodhya",
-        heroImages: ["/assets/seo/ayodhya_ghats.png"],
+        heroImages: ["/assets/allImages/bharat_temple.jpg"],
         metaTitle: "Ayodhya Tour Package for Families | Secure & Comfortable",
         metaDescription: "Traveling with family? Our family packages ensure comfort for all age groups.",
-        sections: [{ title: "Family First", description: "Caring for your loved ones as we visit the holy city.", images: ["/assets/seo/ayodhya_ghats.png"] }],
+        sections: [{ title: "Family First", description: "Caring for your loved ones as we visit the holy city.", images: ["/assets/allImages/tulsi_udyan_temple.jpg"] }],
         tourId: "ayodhya-darshan-2d1n"
     },
     {
@@ -745,13 +766,150 @@ export const seoPages: SEOPage[] = [
         title: "Diwali Ayodhya Darshan Package - The Festival of Lights",
         category: "seasonal",
         locationKey: "ayodhya",
-        heroImages: ["https://images.unsplash.com/photo-1605367031756-3a0597843477?q=80&w=1920&auto=format&fit=crop"],
+        heroImages: ["/assets/allImages/guptar_ghat.jpg"],
         metaTitle: "Diwali Ayodhya Darshan | Limited Festive Slots",
         metaDescription: "Celebrate Diwali where it all began. Unique packages for the festival of lights in Ayodhya.",
-        sections: [{ title: "The Return of Rama", description: "Experience the ultimate Diwali in the city of its origin.", images: ["https://images.unsplash.com/photo-1605367031756-3a0597843477?q=80&w=800&auto=format&fit=crop"] }],
+        sections: [{ title: "The Return of Rama", description: "Experience the ultimate Diwali in the city of its origin.", images: ["/assets/allImages/guptar_ghat.jpg"] }],
         tourId: "ayodhya-darshan-2d1n"
+    },
+    {
+        slug: "jain-pilgrimage-tour-package",
+        title: "Ayodhya Jain Pilgrimage Tour - Uttar Pradesh Jain Circuit",
+        category: "religious-circuits",
+        locationKey: "ayodhya",
+        heroImages: [
+            "/assets/allImages/tomb_of_bahu_beham.jpg",
+            "/assets/allImages/khushro_bagh.jpg"
+        ],
+        metaTitle: "Ayodhya Jain Pilgrimage Tour | 5-Day Uttar Pradesh Jain Circuit",
+        metaDescription: "Explore the sacred Jain pilgrimage sites of Uttar Pradesh including Ayodhya, Ratanpuri, Trilokpuri, Shravasti, Kaushambi, and Prayagraj. Complete 5-day tour itinerary.",
+        sections: [
+            {
+                title: "Experience the Sacred Jain Heritage of Uttar Pradesh",
+                description: "India is a multi-cultural nation famous for its ancient history and Jain temples. Ayodhya, Ratanpuri, Trilokpuri, Shravasti, and Kakandi are key pilgrimage sites. Our specialized Jain tour ensures a divine experience with comfort and deep spiritual connection.",
+                images: ["/assets/allImages/tomb_of_bahu_beham.jpg"]
+            },
+            {
+                title: "Detailed 5-Day Jain Pilgrimage Itinerary",
+                description: "Day 1: Ayodhya Local Tour | Day 2: Ayodhya to Ratanpuri & Return | Day 3: Ayodhya to Trilokpuri & Shravasti | Day 4: Shravasti to Kaushambi | Day 5: Kaushambi to Prayagraj and Ayodhya Drop.",
+                images: ["/assets/allImages/khushro_bagh.jpg"]
+            }
+        ],
+        tourId: "jain-pilgrimage-5d"
+    },
+    {
+        slug: "ayodhya-darshan-1n2d-itinerary",
+        title: "Ayodhya Tour Package - 1 Night 2 Days Itinerary",
+        category: "ayodhya-main",
+        locationKey: "ayodhya",
+        heroImages: ["https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?q=80&w=1920&auto=format&fit=crop"],
+        metaTitle: "Ayodhya Tour Package | 1 Night 2 Days Complete Itinerary",
+        metaDescription: "Book our 1 Night 2 Days Ayodhya tour package. Includes visits to Ram Janmabhoomi, Hanuman Garhi, Saryu Aarti, and more with expert guides.",
+        sections: [
+            {
+                title: "Day 1: Explore Ancient Ghats and Temples",
+                description: "Pickup from Faizabad/Sangam station. Visit Suraj Kund, Bharat Kund, Guptar Ghat, Saryu Ghat Aarti, Nageshvaranath Temple and Ram Ki Paidi. Enjoy the evening aarti by the holy Saryu river.",
+                images: ["https://images.unsplash.com/photo-1612438214708-f428a707dd4e?q=80&w=800"]
+            },
+            {
+                title: "Day 2: Divine Darshan and Historical Insights",
+                description: "After breakfast, visit Mani Parbat, Hanuman Garhi, Ram Janmabhoomi, Dasharatha Bhawan, Kanak Bhavan, and Ram Janmabhoomi Karyashala. Complete your pilgrimage with divine blessings.",
+                images: ["https://images.unsplash.com/photo-1627814263538-466d3330663c?q=80&w=800"]
+            }
+        ],
+        tourId: "ayodhya-darshan-1n2d"
+    },
+    {
+        slug: "varanasi-kashi-vishwanath-temple-tour",
+        title: "Varanasi Kashi Vishwanath Temple Tour - Spiritual Journey",
+        category: "religious-circuits",
+        locationKey: "varanasi",
+        heroImages: ["https://images.unsplash.com/photo-1561361513-2d000a50f0dc?q=80&w=1920&auto=format&fit=crop"],
+        metaTitle: "Varanasi Tour Package | Kashi Vishwanath & Ganga Aarti Experience",
+        metaDescription: "Experience the spiritual energy of Varanasi. Visit Kashi Vishwanath Temple, witness the grand Ganga Aarti, and explore the ancient heritage of Kashi.",
+        sections: [
+            {
+                title: "The Heart of Kashi",
+                description: "Visit the sacred Kashi Vishwanath Temple, Kaal Bhairav, and witness the soul-stirring Ganga Aarti at Dashaswamedh Ghat. A journey that transcends time.",
+                images: ["https://images.unsplash.com/photo-1590736934526-787be0999553?q=80&w=800"]
+            },
+            {
+                title: "Buddhist Heritage and Ancient Forts",
+                description: "Explore Sarnath, the Buddhist circle where Lord Buddha gave his first sermon. Visit Ram Nagar Fort, Sankat Mochan, and the beautiful BHU campus.",
+                images: ["https://images.unsplash.com/photo-1583054994298-cc68ddaca862?q=80&w=800"]
+            }
+        ],
+        tourId: "varanasi-kashi-darshan"
+    },
+    {
+        slug: "agra-mathura-vrindavan-tour-package-details",
+        title: "Agra, Mathura & Vrindavan Tour - Taj Mahal to Krishna Janmasthan",
+        category: "historical-heritage",
+        locationKey: "agra",
+        heroImages: ["https://images.unsplash.com/photo-1564507592333-c60657451ddc?q=80&w=1920&auto=format&fit=crop"],
+        metaTitle: "Agra Mathura Vrindavan Tour Package | Taj Mahal & Krishna Janmabhoomi",
+        metaDescription: "Discover the wonders of Agra and the divinity of Mathura & Vrindavan. From the Taj Mahal to Banke Bihari Temple, witness India's rich heritage.",
+        sections: [
+            {
+                title: "Agra: The City of Taj",
+                description: "Visit the iconic Taj Mahal, Agra Fort, Fatehpur Sikri, and more. Witness the architectural brilliance of the Mughal era.",
+                images: ["https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=800"]
+            },
+            {
+                title: "Mathura & Vrindavan: Land of Lord Krishna",
+                description: "Experience the devotion at Prem Mandir, Banke Bihari, and Krishna Janmasthan. Explore the temples that resonate with the legends of Krishna.",
+                images: ["https://images.unsplash.com/photo-1558431382-27e39cbef4bc?q=80&w=800"]
+            }
+        ],
+        tourId: "agra-mathura-vrindavan"
+    },
+    {
+        slug: "chitrakoot-ramayana-tour",
+        title: "Chitrakoot Tour - In the Footsteps of Lord Rama",
+        category: "religious-circuits",
+        locationKey: "chitrakoot",
+        heroImages: ["https://images.unsplash.com/photo-1541059191172-e221133b3b1e?q=80&w=1920&auto=format&fit=crop"],
+        metaTitle: "Chitrakoot Tour Package | Mythology & Nature Experience",
+        metaDescription: "Explore Chitrakoot, the sacred forest where Lord Rama, Sita, and Lakshman spent 11 years of their exile. Visit Ramghat, Bharat Milap, and more.",
+        sections: [
+            {
+                title: "The Sacred Refuge of Lord Rama",
+                description: "According to the epic Ramayana, Chitrakoot is where Ram, Sita, and Lakshman took refuge for over 11 years during their exile. It is believe that the supreme gods of Hinduism (Brahma, Vishnu, and Shiva) took incarnations here.",
+                images: ["https://images.unsplash.com/photo-1612438214708-f428a707dd4e?q=80&w=800"]
+            },
+            {
+                title: "Bharat Milap and Sacred Ghats",
+                description: "Visit Bharat Milap, the spot where Bharat requested Rama to return to Ayodhya. Experience the serenity of Ramghat on the banks of the Mandakini river.",
+                images: ["https://images.unsplash.com/photo-1627814263538-466d3330663c?q=80&w=800"]
+            }
+        ],
+        tourId: "chitrakoot-full"
+    },
+    {
+        slug: "prayagraj-sangam-snan-tour",
+        title: "Prayagraj Sangam Snan & Temple Tour - Holy Bath Experience",
+        category: "religious-circuits",
+        locationKey: "prayagraj",
+        heroImages: ["https://images.unsplash.com/photo-1638280413186-7fcef084c58c?q=80&w=1920&auto=format&fit=crop"],
+        metaTitle: "Prayagraj Tour Package | Triveni Sangam Snan & Temple Darshan",
+        metaDescription: "Plan your spiritual visit to Prayagraj. Experience the holy snan at Triveni Sangam and visit historic temples like Lete Hanuman and Alopi Devi.",
+        sections: [
+            {
+                title: "Triveni Sangam: The Confluence of Three Rivers",
+                description: "Experience the unique boat ride to the confluence of Ganga, Yamuna, and Saraswati. Take a holy dip and visit the Lete Hanuman Mandir nearby.",
+                images: ["https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?q=80&w=800"]
+            },
+            {
+                title: "Sacred Temples and Historic Sites",
+                description: "Visit Akshayvat, Patalpuri Temple, Bharadwaj Ashram, and enjoy a walk through Chandrashekhar Azad Park and Anand Bhavan.",
+                images: ["https://images.unsplash.com/photo-1638280413186-7fcef084c58c?q=80&w=800"]
+            }
+        ],
+        tourId: "prayagraj-sangam-darshan"
     }
 ];
+
+
 
 export const seoCategories: SEOCategory[] = [
     {
@@ -798,7 +956,8 @@ export const seoCategories: SEOCategory[] = [
             { slug: "kumbh-mela-tour-package-prayagraj", title: "Kumbh Mela" },
             { slug: "varanasi-ghat-tour-booking", title: "Varanasi Boat Tour" },
             { slug: "varanasi-ganga-aarti-tour", title: "Ganga Aarti Tour" },
-            { slug: "ramayana-circuit-tour-package", title: "Ramayana Circuit" }
+            { slug: "ramayana-circuit-tour-package", title: "Ramayana Circuit" },
+            { slug: "chitrakoot-ramayana-tour", title: "Chitrakoot Tour" }
         ]
     },
     {
@@ -849,5 +1008,5 @@ export const seoCategories: SEOCategory[] = [
             { slug: "affordable-ayodhya-tour-packages", title: "Affordable Tours" },
             { slug: "pocket-friendly-ayodhya-trip", title: "Pocket Friendly" }
         ]
-    }
+    },
 ];

@@ -13,26 +13,32 @@ import AyodhyaTaxi from "./pages/AyodhyaTaxi";
 import Destination from "./pages/Destination";
 import AyodhyaHotels from "./pages/AyodhyaHotels";
 import DynamicSEOPage from "./pages/DynamicSEOPage";
+import Terms from "./pages/Terms";
+import ScrollToTop from "./components/common/ScrollToTop";
 
 const App = () => {
   return (
-    <Layout>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/tours" element={<Tours />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/tours/:id" element={<TourDetails />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/taxi/ayodhya" element={<AyodhyaTaxi />} />
-        <Route path="/hotels/ayodhya" element={<AyodhyaHotels />} />
-        <Route path="/destination/:city" element={<Destination />} />
-        <Route path="/info/:slug" element={<DynamicSEOPage />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/booking" element={<Booking />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </Layout>
+    <>
+      <ScrollToTop />
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/tours" element={<Tours />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/tours/:id" element={<TourDetails />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/taxi/ayodhya" element={<AyodhyaTaxi />} />
+          <Route path="/hotels/ayodhya" element={<AyodhyaHotels />} />
+          <Route path="/destination/:city" element={<Destination />} />
+          <Route path="/info/:slug" element={<DynamicSEOPage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/booking" element={<Booking />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Layout>
+    </>
   );
 };
 

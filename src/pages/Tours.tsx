@@ -73,7 +73,7 @@ const Tours = () => {
       <PageHero
         title={<>Sacred Pilgrimages & <br /> <span className="text-accent-yellow">Spiritual Journeys</span></>}
         subtitle="Discover thoughtfully curated yatra packages with comfortable travel, expert guides, and transparent pricing. Experience divinity with peace of mind."
-        backgroundImage="https://images.unsplash.com/photo-1598324789736-4861f89564a0?auto=format&fit=crop&w=2000&q=80"
+        backgroundImage="/assets/allImages/naya_ghat.jpg"
         badges={[
           <><FaStar className="text-yellow-400" /> 4.8/5 Rated</>,
           <><FaShieldAlt className="text-green-400" /> Verified Guides</>,
@@ -133,7 +133,7 @@ const Tours = () => {
             <div className="relative order-2 lg:order-1">
               <div className="absolute -top-4 -left-4 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
               <img
-                src="https://images.unsplash.com/photo-1566863640085-3b6b66fa5468?auto=format&fit=crop&w=1200&q=80"
+                src="/assets/allImages/hanuman_garhi.jpg"
                 alt="Happy Travelers"
                 className="rounded-3xl shadow-2xl relative z-10 w-full"
               />

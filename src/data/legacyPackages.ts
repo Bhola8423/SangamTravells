@@ -1,19 +1,15 @@
 export const legacyPackages = [
   {
     id: 1,
-    title: "Ayodhya → Varanasi → Ayodhya Tour",
+    title: "Ayodhya → Varanasi → Ayodhya Pack",
     price: 1499,
     priceType: "Per Head",
-    seats: "6 Seats",
+    seats: "6 Seats Available",
     durationDays: 2,
     destinations: ["Ayodhya", "Varanasi"],
-    image:
-      "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
+    image: "/assets/allImages/guptar_ghat.jpg",
     inclusions: [
-      "2 Breakfast",
-      "Tea & Snacks",
-      "Water Bottle",
-      "Laddu & Banana",
+      "2 Time Breakfast Included (1 Tea, 2 Samoshe, 1 ltr Water Bottle, 2 Laddu, 2 Banana / Per Head All Free)",
     ],
     itinerary: [
       "Day 1: Suraj Kund, Bharat Kund, Saryu Ghat Aarti, Nageshwar Nath",
@@ -22,19 +18,15 @@ export const legacyPackages = [
   },
   {
     id: 2,
-    title: "Ayodhya → Prayagraj → Mangarh → Ayodhya",
+    title: "Ayodhya → Prayagraj → Mangarh → Ayodhya Pack",
     price: 1499,
     priceType: "Per Head",
-    seats: "6 Seats",
+    seats: "6 Seats Available",
     durationDays: 2,
     destinations: ["Ayodhya", "Prayagraj", "Mangarh"],
-    image:
-      "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1200&q=80",
+    image: "/assets/allImages/naya_ghat.jpg",
     inclusions: [
-      "2 Breakfast",
-      "Tea & Snacks",
-      "Water Bottle",
-      "Laddu & Banana",
+      "2 Time Breakfast Included (1 Tea, 2 Samoshe, 1 ltr Water Bottle, 2 Laddu, 2 Banana / Per Head All Free)",
     ],
     itinerary: [
       "Day 1: Prayagraj city tour",
@@ -43,19 +35,15 @@ export const legacyPackages = [
   },
   {
     id: 3,
-    title: "Ayodhya → Jaunpur (Chaukiya Dham) → Vindhyachal",
+    title: "Ayodhya → Jaunpur → Vindhyachal Pack",
     price: 1499,
     priceType: "Per Head",
     durationDays: 2,
     destinations: ["Ayodhya", "Jaunpur", "Vindhyachal"],
-    seats: "6 Seats",
-    image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+    seats: "6 Seats Available",
+    image: "/assets/allImages/darbhanga_ghat.jpg",
     inclusions: [
-      "2 Breakfast",
-      "Tea & Snacks",
-      "Water Bottle",
-      "Laddu & Banana",
+      "2 Time Breakfast Included (1 Tea, 2 Samoshe, 1 ltr Water Bottle, 2 Laddu, 2 Banana / Per Head All Free)",
     ],
     itinerary: [
       "Day 1: Chaukiya Dham & Vindhyachal",
@@ -66,23 +54,20 @@ export const legacyPackages = [
     id: 4,
     title: "Lucknow → Ayodhya → Varanasi → Prayagraj → Lucknow",
     price: 9999,
-    priceType: "Per Person (Full Tour)",
-    seats: "Hotel + Food + Travel",
+    priceType: "Per Head",
+    seats: "6 Seats Available",
     durationDays: 5,
     destinations: ["Lucknow", "Ayodhya", "Varanasi", "Prayagraj"],
-    image:
-      "https://images.unsplash.com/photo-1500048993959-d6a3f6b1a1b9?auto=format&fit=crop&w=1200&q=80",
+    image: "/assets/allImages/prayagraj_img4.jpg",
     inclusions: [
-      "Hotel Stay",
-      "All Transfers",
-      "Daily Breakfast",
-      "Sightseeing",
+      "3 Night / 5 Days Hotel Stay",
+      "Traveling & Fooding All Included",
     ],
     itinerary: [
       "Day 1–2: Ayodhya",
       "Day 3: Varanasi + Ganga Aarti",
       "Day 4: Prayagraj",
-      "Day 5: Return",
+      "Day 5: Return to Lucknow",
     ],
   },
   {
@@ -93,8 +78,7 @@ export const legacyPackages = [
     seats: "Custom Package",
     durationDays: 6,
     destinations: ["Ayodhya"],
-    image:
-      "https://images.unsplash.com/photo-1519817650390-64a93db511aa?auto=format&fit=crop&w=1200&q=80",
+    image: "/assets/allImages/hanuman_garhi2.jpg",
     inclusions: ["Temple Visits", "Local Sightseeing", "Custom Plan"],
     itinerary: [],
   },

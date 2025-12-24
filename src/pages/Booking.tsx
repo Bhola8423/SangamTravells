@@ -43,7 +43,7 @@ const Booking = () => {
             <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <img
-                        src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=2000&q=80"
+                        src="/assets/allImages/kanak_bhawan.jpg"
                         alt="Booking Hero"
                         className="w-full h-full object-cover"
                     />

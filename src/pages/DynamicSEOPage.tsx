@@ -202,7 +202,7 @@ const DynamicSEOPage: React.FC = () => {
     );
 };
 
-const NextArrow = (props: any) => {
+const NextArrow = (props: { onClick?: () => void }) => {
     const { onClick } = props;
     return (
         <button
@@ -214,7 +214,7 @@ const NextArrow = (props: any) => {
     );
 };
 
-const PrevArrow = (props: any) => {
+const PrevArrow = (props: { onClick?: () => void }) => {
     const { onClick } = props;
     return (
         <button

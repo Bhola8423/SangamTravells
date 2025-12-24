@@ -23,8 +23,8 @@ type Slide = {
 const slides: Slide[] = [
   {
     id: "s1",
-    title: "Experience soulful journeys — Ayodhya, Varanasi & Prayagraj",
-    subtitle: "Tailor-made yatra packages • Reliable taxi services • Trusted local guides",
+    title: "Escape The Ordinary, Go with Sangam",
+    subtitle: "Experience soulful journeys across Ayodhya, Varanasi & Prayagraj with tailored yatra packages.",
     ctaText: "Explore Tours",
     ctaLink: "/tours",
     image: banner1,
@@ -36,33 +36,36 @@ const slides: Slide[] = [
       "Sedan, SUV, Tempo Traveller, Mini Bus & Luxury Coaches — book instantly",
     ctaText: "Book Taxi",
     ctaLink: "/contact",
-    image : banner2 },
+    image: banner2
+  },
   {
     id: "s3",
     title: "Guided Pilgrimage Tours with thoughtful itineraries",
     subtitle: "Local guides, smooth darshan timings and comfortable stays",
     ctaText: "View Featured Tours",
     ctaLink: "/tours",
-    image: banner3, },
-     {
-    id: "s1",
-    title: "Experience soulful journeys — Ayodhya, Varanasi & Prayagraj",
-    subtitle: "Tailor-made yatra packages • Reliable taxi services • Trusted local guides",
+    image: banner3,
+  },
+  {
+    id: "s4",
+    title: "Escape The Ordinary, Go with Sangam",
+    subtitle: "Reliable taxi services • Trusted local guides • Memorable spiritual journeys",
     ctaText: "Explore Tours",
     ctaLink: "/tours",
     image: banner4,
   },
   {
     id: "s2",
-    title: "Comfortable taxi services for all group sizes",
+    title: "Plan your Divine Yatra with Sangam Travels",
     subtitle:
-      "Sedan, SUV, Tempo Traveller, Mini Bus & Luxury Coaches — book instantly",
-    ctaText: "Book Taxi",
+      "Special packages for Ram Mandir, Kashi Vishwanath and Triveni Sangam Snan",
+    ctaText: "Get Started",
     ctaLink: "/contact",
-    image : banner5 },
+    image: banner5
+  },
 ];
 
-const PrevArrow: React.FC<any> = ({ onClick }) => (
+const PrevArrow: React.FC<{ onClick?: () => void }> = ({ onClick }) => (
   <button
     aria-label="Previous slide"
     className="hero-arrow left-4 md:left-8"
@@ -75,7 +78,7 @@ const PrevArrow: React.FC<any> = ({ onClick }) => (
   </button>
 );
 
-const NextArrow: React.FC<any> = ({ onClick }) => (
+const NextArrow: React.FC<{ onClick?: () => void }> = ({ onClick }) => (
   <button
     aria-label="Next slide"
     className="hero-arrow right-4 md:right-8"
