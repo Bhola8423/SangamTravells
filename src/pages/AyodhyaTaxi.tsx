@@ -13,7 +13,7 @@ const taxiRates = [
         localPrice: 1600,
         outstationPrice: "11/km",
         // Generic reliable hatchback
-        image: "https://images.unsplash.com/photo-1506015391300-480268d3534f?auto=format&fit=crop&w=600&q=80",
+        image: "/assets/allImages/hanuman_garhi.jpg",
         features: ["AC", "Audio System", "Comfortable Seats"]
     },
     {
@@ -24,7 +24,7 @@ const taxiRates = [
         localPrice: 1800,
         outstationPrice: "12/km",
         // White Sedan
-        image: "https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&w=600&q=80",
+        image: "/assets/allImages/nageshwarnath_temple.jpg",
         features: ["AC", "Large Boot", "Premium Interiors"],
         popular: true
     },
@@ -36,7 +36,7 @@ const taxiRates = [
         localPrice: 2400,
         outstationPrice: "16/km",
         // White SUV
-        image: "https://images.unsplash.com/photo-1567818735868-e71b99e59176?auto=format&fit=crop&w=600&q=80",
+        image: "/assets/allImages/guptar_ghat.jpg",
         features: ["Dual AC", "Captain Seats", "Ample Space"]
     },
     {
@@ -47,9 +47,9 @@ const taxiRates = [
         localPrice: 3000,
         outstationPrice: "20/km",
         // VIP/Premium look
-        image: "https://images.unsplash.com/photo-1625055370842-88599de936f4?auto=format&fit=crop&w=600&q=80",
+        image: "/assets/allImages/naya_ghat.jpg",
         features: ["Leather Seats", "Ambient Light", "VIP Comfort"]
-    }
+    },
 ];
 
 const AyodhyaTaxi = () => {
@@ -57,8 +57,8 @@ const AyodhyaTaxi = () => {
         <>
             <PageHero
                 title={<>Premium <span className="text-accent-yellow">Taxi Services</span> <br /> in Ayodhya</>}
-                subtitle="Explore the holy city with our reliable taxi services. we provide clean cars, professional drivers, and transparent pricing for all your travel needs."
-                backgroundImage="https://images.unsplash.com/photo-1590050752117-23dc5f5ca6b1?auto=format&fit=crop&w=2000&q=80"
+                subtitle="Explore the holy city with our reliable taxi services. With 2+ years of experience and thousands of satisfied customers, we provide clean cars, professional drivers, and specialized knowledge of Himalayan roads and Chardham routes."
+                backgroundImage="/assets/allImages/darbhanga_ghat.jpg"
             />
 
             {/* WHY CHOOSE OUR TAXI */}
@@ -146,6 +146,33 @@ const AyodhyaTaxi = () => {
                                 </div>
                             </div>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* EXPERIENCE & SERVICES */}
+            <section className="py-20 bg-white">
+                <div className="container-custom px-6 md:px-12">
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h2 className="text-3xl font-serif font-bold text-secondary mb-6 italic">2 Years of Happy Journeys</h2>
+                            <p className="text-slate-600 leading-relaxed mb-6 text-justify uppercase tracking-tight text-sm font-semibold opacity-80 mb-2">Best Site about Sangam Tour and Travels Ayodhya ,Taxi Service – Ayodhya,Ratanpuri,Trilokpuri, kakandi, Prayagraj, Varanasi, Delhi, Agra & Chardam Taxi</p>
+                            <p className="text-slate-600 leading-relaxed mb-6 text-justify">
+                                Sangam Tour and Travels Ayodha Holidays offers great deals on taxis. We offer all types of taxis including basic 5-seater cars, budget taxi services, and luxury taxis for those who want to tour Sangam Tour and Travels Ayodha Yatra.
+                            </p>
+                            <p className="text-slate-600 leading-relaxed text-justify">
+                                Travelers book Sangam Tour and Travels Yatra taxis only for their own comfort, privacy, and peace of mind. Book a taxi and you will reach everything in full security as our drivers have extensive experience and knowledge of Himalayan roads and Chardham routes.
+                            </p>
+                        </div>
+                        <div className="bg-slate-100 rounded-3xl p-8 border border-slate-200 shadow-inner">
+                            <h3 className="text-xl font-bold text-secondary mb-4">Intercity & Pilgrimage Specials</h3>
+                            <ul className="space-y-3 font-medium text-slate-700">
+                                <li className="flex items-center gap-3"><FaCheckCircle className="text-primary" /> Ayodhya to Ratanpuri & Trilokpuri</li>
+                                <li className="flex items-center gap-3"><FaCheckCircle className="text-primary" /> Prayagraj & Varanasi Circuits</li>
+                                <li className="flex items-center gap-3"><FaCheckCircle className="text-primary" /> Delhi, Agra & Chardam Yatra</li>
+                                <li className="flex items-center gap-3"><FaCheckCircle className="text-primary" /> Budget & Luxury Car Rentals</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>

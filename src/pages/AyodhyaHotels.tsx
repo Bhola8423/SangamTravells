@@ -10,7 +10,7 @@ const hotels = [
         name: "Economy Stay",
         category: "Budget",
         price: 1500,
-        image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=600&q=80",
+        image: "/assets/allImages/kanak_bhawan.jpg",
         features: ["Clean Rooms", "Free WiFi", "Near Ram Mandir"],
         rating: 4.0
     },
@@ -19,7 +19,7 @@ const hotels = [
         name: "Comfort Inn",
         category: "Standard",
         price: 2500,
-        image: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=600&q=80",
+        image: "/assets/allImages/hanuman_garhi2.jpg",
         features: ["AC Rooms", "Room Service", "Led TV", "Attached Bath"],
         rating: 4.5,
         popular: true
@@ -29,7 +29,7 @@ const hotels = [
         name: "Royal Heritage",
         category: "Premium",
         price: 4500,
-        image: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=600&q=80",
+        image: "/assets/allImages/guptar_ghat.jpg",
         features: ["Luxury Interiors", "Multi-cuisine Restaurant", "Pick & Drop", "City View"],
         rating: 4.8
     },
@@ -38,7 +38,7 @@ const hotels = [
         name: "Divine Palace",
         category: "Luxury",
         price: 6500,
-        image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80",
+        image: "/assets/allImages/naya_ghat.jpg",
         features: ["5-Star Amenities", "Spa & Wellness", "Banquet Hall", "VIP Service"],
         rating: 5.0
     }
@@ -50,7 +50,7 @@ const AyodhyaHotels = () => {
             <PageHero
                 title={<>Stay in <span className="text-accent-yellow">Divine Comfort</span> <br /> in Ayodhya</>}
                 subtitle="Experience the best hospitality with our curated selection of hotels, from budget-friendly stays to luxurious resorts near Ram Mandir."
-                backgroundImage="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=2000&q=80"
+                backgroundImage="/assets/allImages/tulsi_udyan_temple.jpg"
             />
 
             {/* AMENITIES */}

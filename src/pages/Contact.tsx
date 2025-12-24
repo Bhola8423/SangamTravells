@@ -1,6 +1,7 @@
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaPaperPlane } from "react-icons/fa";
 import ReadyToPlan from "../components/common/ReadyToPlan";
 import PageHero from "../components/common/PageHero";
+import SITE from "../config/site";
 
 const Contact = () => {
   return (
@@ -8,7 +9,7 @@ const Contact = () => {
       <PageHero
         title={<>Get in <span className="text-accent-yellow">Touch</span></>}
         subtitle="Have questions or ready to plan your spiritual journey? Reach out to us — we’re always happy to help."
-        backgroundImage="https://images.unsplash.com/photo-1596524430615-b46475ddff6e?auto=format&fit=crop&w=2000&q=80"
+        backgroundImage="/assets/allImages/vishwanath_temple.jpg"
       />
 
       {/* CONTACT SECTION */}
@@ -36,7 +37,7 @@ const Contact = () => {
                   <FaPhoneAlt />
                 </div>
                 <h3 className="font-bold text-lg text-secondary mb-1">Call Us</h3>
-                <p className="text-slate-600 font-medium">+91 93361 74751</p>
+                <p className="text-slate-600 font-medium">+91 95216 09765</p>
               </div>
 
               {/* WhatsApp */}
@@ -46,7 +47,7 @@ const Contact = () => {
                 </div>
                 <h3 className="font-bold text-lg text-secondary mb-1">WhatsApp</h3>
                 <a
-                  href="https://wa.me/919336174751"
+                  href="https://wa.me/919521609765"
                   target="_blank"
                   rel="noreferrer"
                   className="text-primary font-medium hover:underline"
@@ -61,7 +62,11 @@ const Contact = () => {
                   <FaEnvelope />
                 </div>
                 <h3 className="font-bold text-lg text-secondary mb-1">Email</h3>
-                <p className="text-slate-600 font-medium text-sm break-all">sangamtourtravels005@gmail.com</p>
+                <div className="flex flex-col">
+                  {SITE.emails.map((email) => (
+                    <a key={email} href={`mailto:${email}`} className="text-slate-600 font-medium text-sm break-all hover:underline">{email}</a>
+                  ))}
+                </div>
               </div>
 
               {/* Address */}
@@ -70,7 +75,7 @@ const Contact = () => {
                   <FaMapMarkerAlt />
                 </div>
                 <h3 className="font-bold text-lg text-secondary mb-1">Office</h3>
-                <p className="text-slate-600 font-medium text-sm">Prayagraj, Uttar Pradesh</p>
+                <p className="text-slate-600 font-medium text-sm">{SITE.address}</p>
               </div>
             </div>
           </div>
@@ -137,7 +142,7 @@ const Contact = () => {
         <div className="rounded-3xl overflow-hidden shadow-xl border-4 border-white">
           <iframe
             title="Office Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14407.608331394464!2d81.86129849999999!3d25.4491062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399aca7885b00001%3A0x1c3a613204961555!2sSangam%20Tour%20and%20Travels!5e0!3m2!1sen!2sin!4v1703000000000!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3567.8183182878!2d82.0526587!3d26.7319372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399a0fc466f7f4d5%3A0x8f358850e9faf479!2sManapur%20Post%20Office!5e0!3m2!1sen!2sin!4v1735056300000!5m2!1sen!2sin"
             width="100%"
             height="450"
             loading="lazy"

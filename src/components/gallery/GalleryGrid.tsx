@@ -5,25 +5,25 @@ const images = [
     // PILGRIMAGE
     {
         id: 1,
-        src: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80",
+        src: "/assets/allImages/hanuman_garhi.jpg",
         category: "Pilgrimage",
         label: "Ram Mandir, Ayodhya"
     },
     {
         id: 2,
-        src: "https://images.unsplash.com/photo-1598324789736-4861f89564a0?auto=format&fit=crop&w=800&q=80",
+        src: "/assets/allImages/guptar_ghat.jpg",
         category: "Pilgrimage",
         label: "Saryu Ghat Aarti"
     },
     {
         id: 3,
-        src: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80",
+        src: "/assets/allImages/vishwanath_temple.jpg",
         category: "Pilgrimage",
         label: "Kashi Vishwanath"
     },
     {
         id: 4,
-        src: "https://images.unsplash.com/photo-1519817650390-64a93db511aa?auto=format&fit=crop&w=800&q=80",
+        src: "/assets/allImages/prayagraj_img3.jpg",
         category: "Pilgrimage",
         label: "Triveni Sangam"
     },
@@ -31,19 +31,19 @@ const images = [
     // TAXI / FLEET
     {
         id: 5,
-        src: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80",
+        src: "/assets/allImages/taj_mahal.jpg",
         category: "Taxi",
         label: "Premium Innova Crysta"
     },
     {
         id: 6,
-        src: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=800&q=80",
+        src: "/assets/allImages/dwarikadhessh_temple.jpg",
         category: "Taxi",
         label: "Urban Cruiser"
     },
     {
         id: 7,
-        src: "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=800&q=80",
+        src: "/assets/allImages/durga_temple.jpg",
         category: "Taxi",
         label: "Comfortable Sedan"
     },
@@ -51,13 +51,13 @@ const images = [
     // GROUP TOURS / HAPPY TRAVELERS
     {
         id: 8,
-        src: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80",
+        src: "/assets/allImages/kanak_bhawan.jpg",
         category: "Group Tour",
         label: "Family Yatra"
     },
     {
         id: 9,
-        src: "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=800&q=80",
+        src: "/assets/allImages/chitrakoot.jpg",
         category: "Group Tour",
         label: "Happy Group"
     },

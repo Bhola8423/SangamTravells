@@ -70,7 +70,7 @@ const TourDetails = () => {
             <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
               <h3 className="text-2xl font-serif font-bold text-secondary mb-6">Trip Highlights</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {tour.highlights.map((h: any, i: number) => (
+                {tour.highlights.map((h, i: number) => (
                   <div key={i} className="flex items-start gap-3">
                     <div className="mt-1 w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0">
                       <FaCheckCircle className="text-xs" />

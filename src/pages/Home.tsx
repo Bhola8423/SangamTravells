@@ -3,14 +3,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaMapMarkedAlt, FaCar, FaUserShield, FaStar, FaArrowRight } from "react-icons/fa";
 import SectionTitle from "../components/common/SectionTitle";
-import TourCard from "../components/common/TourCard";
-import { tours } from "../data/tours";
 import HeroCarousel from "../components/common/HeroCarousel";
 import TestimonialsCarousel from "../components/common/TestimonialsCarousel";
 import ReadyToPlan from "../components/common/ReadyToPlan";
 import Image1 from "../assets/image1.jpg"
 import { fleetData } from "../data/fleet";
 import VehicleCard from "../components/common/VehicleCard";
+import { destinations } from "../data/destinations";
+import FeaturedPackages from "../components/tours/FeaturedPackages";
+import { tours } from "../data/tours";
+import TourCard from "../components/common/TourCard";
 
 const features = [
   {
@@ -34,7 +36,7 @@ const Home: React.FC = () => {
   const featured = tours.slice(0, 3);
 
   return (
-    <div className="space-y-0">
+    <div className="space-y-0 text-secondary">
       {/* HERO SECTION */}
       <section className="relative h-screen sm:h-[90vh]">
         <HeroCarousel />
@@ -51,6 +53,7 @@ const Home: React.FC = () => {
               <option>Ayodhya</option>
               <option>Varanasi (Kashi)</option>
               <option>Prayagraj</option>
+              <option>Chitrakoot</option>
             </select>
           </div>
           <div className="hidden md:block w-px h-12 bg-gray-200"></div>
@@ -76,12 +79,26 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* DESTINATIONS / PACKAGES */}
-      <section className="section bg-light mx-10">
+      {/* SPECIAL BUDGET PACKAGES (1499 deals) */}
+      <section className="py-24 bg-light overflow-hidden">
         <div className="container-custom">
           <SectionTitle
+            title="Special Tour Packages"
+            subtitle="Exclusive group deals with breakfast menu and special pricing"
+            align="center"
+          />
+          <div className="mt-12">
+            <FeaturedPackages />
+          </div>
+        </div>
+      </section>
+
+      {/* SPIRITUAL JOURNEYS (Standard Itineraries) */}
+      <section className="py-24 bg-white relative">
+        <div className="container-custom px-6 md:px-12">
+          <SectionTitle
             title="Spiritual Journeys"
-            subtitle="Explore our most popular pilgrimage packages"
+            subtitle="Explore our most popular pilgrimage packages with detailed itineraries"
             align="center"
           />
           <div className="mt-12 grid gap-8 grid-cols-1 md:grid-cols-3">
@@ -94,14 +111,131 @@ const Home: React.FC = () => {
               to="/tours"
               className="inline-flex items-center gap-2 font-semibold text-primary hover:text-primaryDark transition-colors"
             >
-              View All Packages <FaArrowRight />
+              View More Professional Packages <FaArrowRight />
             </Link>
           </div>
         </div>
       </section>
 
+      {/* POPULAR DESTINATIONS GRID */}
+      <section className="py-24 bg-slate-50 mx-auto rounded-3xl">
+        <div className="container-custom">
+          <SectionTitle
+            title="Popular Destinations"
+            subtitle="Discover the rich heritage across the holy cities"
+            align="left"
+          />
+
+          <div className="mt-12 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+            {Object.values(destinations).map((dest) => (
+              <Link
+                key={dest.id}
+                to={`/destination/${dest.id}`}
+                className="group relative h-80 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
+              >
+                <img
+                  src={dest.heroImage}
+                  alt={dest.name}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 p-6 text-white translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="text-2xl font-bold font-serif mb-1">{dest.name}</h3>
+                  <p className="text-sm text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300 line-clamp-2">
+                    {dest.title}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* DIVINE HERITAGE LANDMARKS */}
+      <section className="py-24 bg-white mx-10">
+        <div className="container-custom">
+          <SectionTitle
+            title="Divine Heritage of Ayodhya & Kashi"
+            subtitle="Explore the sacred sites that define our spiritual roots"
+            align="center"
+          />
+
+          <div className="mt-16 grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div className="bg-slate-50 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-slate-100">
+              <h3 className="text-2xl font-bold text-secondary mb-4 border-b-2 border-primary w-fit pb-2">Ram Mandir</h3>
+              <p className="text-slate-600 leading-relaxed text-sm">
+                The Ram Mandir is being built at the site of Ram Janmabhoomi, the birthplace of Lord Rama. Supervised by Shri Ram Janmabhoomi Teerth Kshetra, it stands as a testament to faith and architectural brilliance.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-slate-100">
+              <h3 className="text-2xl font-bold text-secondary mb-4 border-b-2 border-primary w-fit pb-2">Hanuman Garhi</h3>
+              <p className="text-slate-600 leading-relaxed text-sm">
+                A 10th-century cave temple dedicated to Lord Hanuman. It is one of the most important temples in Ayodhya, housing a beautiful idol of Anjani with young Hanuman on her lap.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-slate-100">
+              <h3 className="text-2xl font-bold text-secondary mb-4 border-b-2 border-primary w-fit pb-2">Kashi Vishwanath</h3>
+              <p className="text-slate-600 leading-relaxed text-sm">
+                Located in the heart of Varanasi, this Jyotirlinga shrine is dedicated to Lord Shiva, the Lord of the Universe. The current structure was built by Ahilyabai Holkar in 1780.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-slate-100">
+              <h3 className="text-2xl font-bold text-secondary mb-4 border-b-2 border-primary w-fit pb-2">Kanak Bhawan</h3>
+              <p className="text-slate-600 leading-relaxed text-sm">
+                Believed to be a gift to Devi Sita by Kaikeyi after her marriage to Lord Ram. This private palace of Lord Ram and Mata Sita is a masterpiece of Ayodhya's spiritual architecture, renovated by Vikramaditya.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-slate-100">
+              <h3 className="text-2xl font-bold text-secondary mb-4 border-b-2 border-primary w-fit pb-2">Triveni Sangam</h3>
+              <p className="text-slate-600 leading-relaxed text-sm">
+                The most pious confluence where the Ganga, Yamuna, and mythical Saraswati meet. It is the place of the first sacrifice by Lord Brahma and a major pilgrimage center.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-slate-100">
+              <h3 className="text-2xl font-bold text-secondary mb-4 border-b-2 border-primary w-fit pb-2">Chitrakoot</h3>
+              <p className="text-slate-600 leading-relaxed text-sm">
+                The sacred forest where Lord Rama, Sita, and Lakshman spent over 11 years of their exile. It is believe that the supreme gods (Brahma, Vishnu, Shiva) took incarnations here.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-slate-100">
+              <h3 className="text-2xl font-bold text-secondary mb-4 border-b-2 border-primary w-fit pb-2">Naya Ghat</h3>
+              <p className="text-slate-600 leading-relaxed text-sm">
+                A top player in the category in Ayodhya, Naya Ghat acts as a one-stop destination for pilgrims seeking spiritual solace along the holy Sarayu river.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-slate-100">
+              <h3 className="text-2xl font-bold text-secondary mb-4 border-b-2 border-primary w-fit pb-2">Sri Nageshwarnath</h3>
+              <p className="text-slate-600 leading-relaxed text-sm">
+                Dedicated to Lord Shiva, this temple houses one of the 12 jyotirlingas. It is believed to have been raised by Lord Rama’s son, Kush, at Ram-ki-Pairi.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-slate-100">
+              <h3 className="text-2xl font-bold text-secondary mb-4 border-b-2 border-primary w-fit pb-2">Guptar Ghat</h3>
+              <p className="text-slate-600 leading-relaxed text-sm">
+                The sacred spot on the banks of Saryu where Lord Rama is believed to have taken Jal Samadhi. These beautiful ghats were built by Raja Darshan Singh in the 19th century.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-slate-100">
+              <h3 className="text-2xl font-bold text-secondary mb-4 border-b-2 border-primary w-fit pb-2">Tomb of Bahu Begum</h3>
+              <p className="text-slate-600 leading-relaxed text-sm">
+                A memorial built for the queen of Nawab Shuja-ud-Daula. It is one of the tallest buildings in Faizabad and a notable example of non-Mughal Muslim architecture.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FLEET PREVIEW */}
-      <section className="section bg-gradient-to-br from-gray-50 to-orange-50/30 mx-10 relative overflow-hidden">
+      <section className="section bg-gradient-to-br from-slate-50 to-orange-50/30 mx-10 relative overflow-hidden">
         <div className="absolute inset-0 opacity-30">
           <div className="absolute top-10 left-10 w-32 h-32 bg-primary/5 rounded-full blur-xl"></div>
           <div className="absolute bottom-10 right-10 w-40 h-40 bg-secondary/5 rounded-full blur-xl"></div>
@@ -195,7 +329,7 @@ const Home: React.FC = () => {
         <div className="container-custom relative z-10 text-center">
           <SectionTitle
             title="Experience the Divine Aura"
-            subtitle="What our travellers say"
+            subtitle="Explore our spiritual presence"
             align="center"
           />
           <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20">
@@ -214,7 +348,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="section bg-light">
+      <section className="section bg-slate-50">
         <div className="container-custom">
           <SectionTitle
             title="Guest Stories"

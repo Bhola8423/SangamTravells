@@ -17,35 +17,39 @@ export const destinations: Record<string, Destination> = {
         id: "ayodhya",
         name: "Ayodhya",
         title: "The Birthplace of Lord Rama",
-        description: "Ayodhya, situated on the banks of the Sarayu River, is one of the seven most sacred cities in India. It is the birthplace of Lord Rama and the setting of the epic Ramayana. The city is currently undergoing a massive transformation with the grand Ram Mandir at its heart.",
-        // Ram Mandir / Ayodhya Theme
+        description: "Ayodhya is a city situated on the banks of the holy river Saryu. It is the administrative headquarters of the Ayodhya district as well as the Ayodhya division. The history of Ayodhya is associated with the broad history of India, dating back to 4000 years. Formerly the area was occupied by the Aryans or the Dasas whose main occupation was agriculture. It was during the Aryan inhabitation that the epics of Mahabharata, Ramayana, Brahmanas and Puranas were written.",
         heroImage: "/assets/seo/ram_janmbhoomi.jpg",
         bestTime: "October to March",
         places: [
             {
-                name: "Ram Janmabhoomi",
+                name: "Ram Mandir",
                 image: "/assets/seo/ram_janmbhoomi.jpg",
-                description: "The sacred site believed to be the birthplace of Lord Rama, now home to the magnificent Ram Mandir."
+                description: "The Ram Mandir is a Hindu temple built at the site of Ram Janmabhoomi, the birthplace of Rama. According to the Ramayana, Rama is a principal deity of Hinduism. The temple construction is supervised by the Shri Ram Janmabhoomi Teerth Kshetra."
             },
             {
                 name: "Hanuman Garhi",
                 image: "/assets/seo/hanuman_garhi.jpeg",
-                description: "A 10th-century temple dedicated to Lord Hanuman, perched on a hillock."
-            },
-            {
-                name: "Saryu Ghat",
-                image: "/assets/seo/saryu_ghats.jpg",
-                description: "Famous for the evening Aarti and holy dips, the banks of the Sarayu river are spiritually uplifting."
+                description: "A 10th-century cave temple dedicated to Lord Hanuman. It is one of the most important temples in Ayodhya, housing a beautiful idol of Anjani with young Hanuman on her lap. (Note: Har Ki Pauri text from the source was corrected to Ayodhya context)."
             },
             {
                 name: "Kanak Bhawan",
                 image: "/assets/seo/kanak_bhawan.jpg",
-                description: "A beautiful temple gifted to Goddess Sita by Kaikeyi, known for its intricate architecture."
+                description: "One of the finest temples in Ayodhya. It is believed that this Bhawan was gifted to Devi Sita by Kaikeyi immediately after her marriage to Lord Ram. It is a private palace of Devi Sita and Lord Rama, renovated by Vikramaditya and later by Queen of Teekamgarh in 1891."
+            },
+            {
+                name: "Guptar Ghat",
+                image: "/assets/seo/saryu_ghats.jpg",
+                description: "The sacred ghat on the bank of River Saryu where Lord Rama is believed to have taken Jal Samadhi to leave the earth and return to Vaikunta. It features well-maintained ghats built by Raja Darshan Singh in the 19th century."
+            },
+            {
+                name: "Tomb of Bahu Begum",
+                image: "/assets/allImages/tomb_of_bahu_beham.jpg",
+                description: "Bahu Begum ka Maqbara is the Tomb of Queen Bride Begum Unmatuzzohra Bano, queen of Nawab Shuja-ud-Daula. It is one of the tallest buildings in Faizabad and a notable example of non-Mughal Muslim architecture."
             },
             {
                 name: "Nageshwarnath Temple",
                 image: "/assets/seo/nageshwarnath_temple.jpg",
-                description: "Established by Kush, the son of Lord Rama, this is one of the oldest Shiva temples in Ayodhya."
+                description: "Located at Ram-ki-Pairi, this temple is dedicated to Lord Shiva and houses one of the 12 jyotirlingas. It is believed to have been raised by Lord Rama’s son, Kush."
             }
         ]
     },
@@ -53,35 +57,24 @@ export const destinations: Record<string, Destination> = {
         id: "varanasi",
         name: "Varanasi",
         title: "The City of Lights & Moksha",
-        description: "Varanasi, or Kashi, is older than history, older than tradition, older even than legend. It is the spiritual capital of India, famous for its ghats, temples, and the mesmerizing Ganga Aarti.",
-        // Varanasi Ghats Main Landscape
-        heroImage: "/assets/seo/varanasi_hero.jpg",
+        description: "Varanasi, or Kashi, is the spiritual capital of India. It centers around the sacred Kashi Vishwanath temple and the eternal flow of the Ganges.",
+        heroImage: "/assets/allImages/varanasi_img2.jpg",
         bestTime: "November to February",
         places: [
             {
                 name: "Kashi Vishwanath Temple",
                 image: "/assets/seo/kashivishwanath_temple.jpg",
-                description: "One of the 12 Jyotirlingas, this is the most sacred temple dedicated to Lord Shiva."
+                description: "Dedicated to Lord Shiva, known as Vishwanath or Lord of the Universe. It is one of the twelve Jyotirlinga shrines. The current structure was built by Ahilyabai Holkar in 1780."
             },
             {
                 name: "Dashashwamedh Ghat",
                 image: "/assets/seo/dashawashmedh_ghat.jpg",
-                description: "The main ghat in Varanasi on the Ganga River, famous for the spectacular evening Ganga Aarti."
+                description: "The main ghat in Varanasi, famous for the spectacular evening Ganga Aarti that draws thousands of devotees."
             },
             {
                 name: "Sarnath",
                 image: "/assets/seo/sarnath.jpg",
-                description: "Where Lord Buddha gave his first sermon. A peaceful contrast to the bustle of Varanasi."
-            },
-            {
-                name: "Assi Ghat",
-                image: "/assets/seo/assi_ghat.jpg",
-                description: "The southernmost ghat, known for being a place where long-term foreign students, researchers, and tourists live."
-            },
-            {
-                name: "Manikarnika Ghat",
-                image: "/assets/seo/manikarnika_ghat.jpg",
-                description: "The primary cremation ghat in Varanasi, reflecting the eternal cycle of life and death in Hinduism."
+                description: "The site of Buddha's first sermon, housing the Dhamekh Stupa and ancient Buddhist relics."
             }
         ]
     },
@@ -89,39 +82,44 @@ export const destinations: Record<string, Destination> = {
         id: "prayagraj",
         name: "Prayagraj",
         title: "The Land of Sangam",
-        description: "Prayagraj (formerly Allahabad) is famous for the Triveni Sangam, the confluence of the Ganges, Yamuna, and the mythical Saraswati rivers. It is a major pilgrimage center and the host of the Maha Kumbh Mela.",
-        // Kumbh / Sangam view
-        heroImage: "https://images.unsplash.com/photo-1619854406117-d7e108608e8b?q=80&w=1920&auto=format&fit=crop",
-        bestTime: "October to March (especially Jan-Feb for Magh Mela)",
+        description: "Prayagraj is the 'Place of Sacrifice' where the holy Ganga, Yamuna, and mythical Saraswati meet. It is the most pious confluence in Hinduism.",
+        heroImage: "/assets/allImages/prayagraj_img2.jpg",
+        bestTime: "October to March",
         places: [
             {
                 name: "Triveni Sangam",
-                // Boats at Sangam
                 image: "/assets/seo/triveni_img2.jpg",
-                description: "The holy confluence of three rivers. taking a dip here is believed to wash away all sins."
+                description: "The most pious confluence where Ganga, Yamuna and Saraswati meet. Traditionally regarded as the most auspicious place for a holy dip."
+            },
+            {
+                name: "Lete Hanuman Mandir",
+                image: "/assets/seo/hanuman_mandir_prayagraj.jpg",
+                description: "A unique temple near the Sangam featuring a reclining statue of Lord Hanuman, submerged during peak floods."
             },
             {
                 name: "Anand Bhawan",
-                // Historical Building
                 image: "/assets/seo/anand_bhawan.png",
-                description: "The ancestral home of the Nehru-Gandhi family, now a museum showcasing India's freedom struggle."
+                description: "The ancestral home of the Nehru-Gandhi family, reflecting India's modern history."
+            }
+        ]
+    },
+    chitrakoot: {
+        id: "chitrakoot",
+        name: "Chitrakoot",
+        title: "The Hill of Many Wonders",
+        description: "Where Lord Rama spent 11 years, 11 months, and 11 days of his exile. A place where the supreme gods took incarnation.",
+        heroImage: "/assets/allImages/chitrakoot.jpg",
+        bestTime: "All year round",
+        places: [
+            {
+                name: "Ramghat",
+                image: "/assets/allImages/chitrakoot.jpg",
+                description: "The main ghat on the banks of Mandakini river where Lord Ram, Sita and Lakshman took refuge."
             },
             {
-                name: "Hanuman Mandir",
-                // Temple / Statue
-                image: "/assets/seo/hanuman_mandir_prayagraj.jpg",
-                description: "A famous temple near the Sangam featuring a reclining statue of Lord Hanuman."
-            },
-            {
-                name: "Allahabad Fort",
-                // Fort Walls
-                image: "/assets/seo/prayagraj_fort.jpg",
-                description: "Built by Emperor Akbar in 1583, this majestic fort stands on the banks of the Yamuna."
-            },
-            {
-                name: "Khusro Bagh",
-                image: "/assets/seo/khushro_bagh.jpg",
-                description: "A large walled garden housing the tombs of Prince Khusrau and his family, examples of Mughal architecture."
+                name: "Bharat Milap",
+                image: "/assets/allImages/chandrasekhar_azad_park.jpg",
+                description: "The spot where Bharat met Lord Rama and requested him to return to Ayodhya and rule the kingdom."
             }
         ]
     }

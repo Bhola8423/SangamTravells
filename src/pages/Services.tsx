@@ -12,7 +12,7 @@ const Services = () => {
       <PageHero
         title={<>Premium Travel & <br /> <span className="text-accent-yellow">Taxi Services</span></>}
         subtitle="Experience comfort, reliability, and safety with our premium fleet and expert drivers. Whether it's a local ride or a pilgrimage daily tour, we serve you with a smile."
-        backgroundImage="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=2000&q=80"
+        backgroundImage="/assets/allImages/darbhanga_ghat.jpg"
         badges={[
           <><FaStar className="text-yellow-400" /> Top Rated Service</>,
           <><FaShieldAlt className="text-green-400" /> Safe & Secure</>,
@@ -32,7 +32,7 @@ const Services = () => {
             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
             <div className="md:w-1/2 relative h-64 md:h-auto">
               <img
-                src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80"
+                src="/assets/allImages/tulsi_udyan_temple.jpg"
                 alt="Luxury Hotel"
                 className="absolute inset-0 w-full h-full object-cover"
               />
