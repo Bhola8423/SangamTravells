@@ -7,8 +7,7 @@ import EmptyState from "../components/common/EmptyState";
 import PageHero from "../components/common/PageHero";
 import ReadyToPlan from "../components/common/ReadyToPlan";
 import { tours } from "../data/tours";
-import { legacyPackages } from "../data/legacyPackages";
-
+// Use tours directly
 const Tours = () => {
   const [filters, setFilters] = useState({
     location: "All",
@@ -17,26 +16,9 @@ const Tours = () => {
     tourType: "All",
   });
 
-  // Merge tours and legacyPackages
-  // We adapt legacyPackages to match the Tour interface structure used by TourCard
+  // Use tours directly
   const allTours = useMemo(() => {
-    const adaptedLegacy = legacyPackages.map(pkg => ({
-      id: `legacy-${pkg.id}`,
-      name: pkg.title,
-      slug: pkg.title.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, ''),
-      location: pkg.destinations.join(" - "),
-      durationDays: pkg.durationDays,
-      priceFrom: pkg.price,
-      thumbnailUrl: pkg.image,
-      heroImageUrl: pkg.image,
-      shortDescription: `Enjoy a ${pkg.durationDays}-day tour covering ${pkg.destinations.join(", ")}. Includes ${pkg.inclusions.join(", ")}.`,
-      highlights: pkg.itinerary.slice(0, 3), // First 3 items as highlights
-      itinerary: pkg.itinerary,
-      includes: pkg.inclusions,
-      excludes: ["Personal expenses"], // Default
-    }));
-
-    return [...tours, ...adaptedLegacy];
+    return tours;
   }, []);
 
   const handleFilterChange = (key: string, value: string) => {

@@ -4,19 +4,19 @@ import MediaModal from "./MediaModal";
 const videos = [
   {
     id: 1,
-    thumb: "https://images.unsplash.com/photo-1519817650390-64a93db511aa?auto=format&fit=crop&w=900&q=80",
+    thumb: "/assets/seo/ayodhya_ram_mandir.png",
     src: "https://www.w3schools.com/html/mov_bbb.mp4",
     title: "Ayodhya Yatra Experience",
   },
   {
     id: 2,
-    thumb: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
+    thumb: "/assets/seo/varanasi_ghats.jpg",
     src: "https://www.w3schools.com/html/movie.mp4",
     title: "Varanasi Spiritual Tour",
   },
   {
     id: 3,
-    thumb: "https://images.unsplash.com/photo-1500048993959-d6a3f6b1a1b9?auto=format&fit=crop&w=900&q=80",
+    thumb: "/assets/allImages/tempo_traveller1.jpeg",
     src: "https://www.w3schools.com/html/mov_bbb.mp4",
     title: "Group Pilgrimage Journey",
   },

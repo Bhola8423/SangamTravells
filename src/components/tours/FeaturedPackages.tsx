@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { legacyPackages } from "../../data/legacyPackages";
 import SITE from "../../config/site";
 
@@ -66,14 +67,12 @@ const FeaturedPackages = () => {
                 )}
               </>
             )}
-            <a
-              href={SITE.social.whatsapp}
-              target="_blank"
-              rel="noreferrer"
+            <Link
+              to={`/booking?tourId=special-budget-${pkg.id}`}
               className="mt-6 inline-flex items-center justify-center w-full h-11 rounded-xl bg-gradient-to-r from-[#e76f51] to-[#d65a3a] text-white font-semibold shadow hover:scale-105 transition"
             >
               Book Now
-            </a>
+            </Link>
           </div>
         </div>
       ))}

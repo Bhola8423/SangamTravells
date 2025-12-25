@@ -6,7 +6,7 @@ interface Props {
 const VideoModal: React.FC<Props> = ({ src, onClose }) => {
   return (
     <div
-      className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center px-4"
+      className="fixed inset-0 z-100 bg-black/90 flex items-center justify-center px-4"
       onClick={onClose}
     >
       <div

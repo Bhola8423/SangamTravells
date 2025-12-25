@@ -1,12 +1,15 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
-import { FaCalendarAlt, FaUser, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaUsers, FaPaperPlane } from "react-icons/fa";
+import { useLocation, useSearchParams } from "react-router-dom";
+import { FaCalendarAlt, FaUser, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaUsers, FaPaperPlane, FaRupeeSign, FaClock } from "react-icons/fa";
 import ReadyToPlan from "../components/common/ReadyToPlan";
 import { tours } from "../data/tours";
 
 const Booking = () => {
     const location = useLocation();
-    const preSelectedTourId = location.state?.tourId || "";
+    const [searchParams] = useSearchParams();
+
+    // Priority: URL Param > Navigation State > Default
+    const preSelectedTourId = searchParams.get("tourId") || location.state?.tourId || "";
 
     const [formData, setFormData] = useState({
         name: "",
@@ -18,12 +21,26 @@ const Booking = () => {
         message: "",
     });
 
-    // Update tourId if passed via navigation state later
+    const [selectedTour, setSelectedTour] = useState(
+        tours.find(t => t.id === preSelectedTourId) || null
+    );
+
+    // Update form and selected tour when URL/State changes
     useEffect(() => {
         if (preSelectedTourId) {
             setFormData((prev) => ({ ...prev, tourId: preSelectedTourId }));
+            const tour = tours.find(t => t.id === preSelectedTourId);
+            setSelectedTour(tour || null);
         }
     }, [preSelectedTourId]);
+
+    // Handle manual dropdown change
+    const onTourSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        const newId = e.target.value;
+        handleChange(e);
+        const tour = tours.find(t => t.id === newId);
+        setSelectedTour(tour || null);
+    };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
@@ -33,7 +50,7 @@ const Booking = () => {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         // In a real app, send to API. For now, just alert or log.
-        alert("Booking Request Sent! We will contact you shortly.");
+        alert(`Booking Request Sent for ${selectedTour ? selectedTour.name : "Custom Plan"}! We will contact you shortly.`);
         console.log("Booking Data:", formData);
     };
 
@@ -72,6 +89,49 @@ const Booking = () => {
                         </h2>
                         <p className="text-slate-500 mt-2">No payment required immediately. We will confirm availability first.</p>
                     </div>
+
+                    {/* SELECTED PACKAGE SUMMARY CARD */}
+                    {selectedTour && (
+                        <div className="mb-12 bg-slate-50 rounded-2xl p-6 border border-slate-200 flex flex-col md:flex-row gap-6 items-center md:items-start animate-fade-in shadow-inner">
+                            <div className="w-full md:w-1/3 aspect-video rounded-xl overflow-hidden shadow-md">
+                                <img
+                                    src={selectedTour.thumbnailUrl}
+                                    alt={selectedTour.name}
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                            <div className="w-full md:w-2/3 space-y-3 text-center md:text-left">
+                                <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                                    Selected Package
+                                </span>
+                                <h3 className="text-2xl font-serif font-bold text-secondary">
+                                    {selectedTour.name}
+                                </h3>
+                                <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-sm text-slate-600">
+                                    <div className="flex items-center gap-1">
+                                        <FaMapMarkerAlt className="text-primary" /> {selectedTour.location}
+                                    </div>
+                                    <div className="flex items-center gap-1">
+                                        <FaClock className="text-primary" /> {selectedTour.durationDays} Days
+                                    </div>
+                                </div>
+                                <div className="pt-2 border-t border-slate-200 mt-2">
+                                    <div className="text-xs text-slate-400 font-medium uppercase">Estimated Price</div>
+                                    <div className="text-3xl font-bold text-primary flex items-center justify-center md:justify-start gap-1">
+                                        {selectedTour.priceFrom > 0 ? (
+                                            <>
+                                                <FaRupeeSign className="text-2xl" />
+                                                {selectedTour.priceFrom.toLocaleString("en-IN")}
+                                                <span className="text-sm font-medium text-slate-400 ml-1">/ person</span>
+                                            </>
+                                        ) : (
+                                            <span className="text-2xl">On Request</span>
+                                        )}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    )}
 
                     <form onSubmit={handleSubmit} className="space-y-8">
 
@@ -144,7 +204,7 @@ const Booking = () => {
                                         <select
                                             name="tourId"
                                             value={formData.tourId}
-                                            onChange={handleChange}
+                                            onChange={onTourSelectChange}
                                             className="w-full pl-11 pr-10 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all font-medium appearance-none"
                                         >
                                             <option value="">-- Select a Package --</option>

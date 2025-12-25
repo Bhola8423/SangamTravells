@@ -3,54 +3,7 @@ import { Link } from "react-router-dom";
 import ReadyToPlan from "../components/common/ReadyToPlan";
 import PageHero from "../components/common/PageHero";
 
-// Taxi Rate Data
-const taxiRates = [
-    {
-        id: 1,
-        type: "Hatchback",
-        models: "WagonR / Celerio",
-        capacity: "4 Passengers",
-        localPrice: 1600,
-        outstationPrice: "11/km",
-        // Generic reliable hatchback
-        image: "/assets/allImages/hanuman_garhi.jpg",
-        features: ["AC", "Audio System", "Comfortable Seats"]
-    },
-    {
-        id: 2,
-        type: "Sedan",
-        models: "Dzire / Etios",
-        capacity: "4 Passengers",
-        localPrice: 1800,
-        outstationPrice: "12/km",
-        // White Sedan
-        image: "/assets/allImages/nageshwarnath_temple.jpg",
-        features: ["AC", "Large Boot", "Premium Interiors"],
-        popular: true
-    },
-    {
-        id: 3,
-        type: "SUV / MUV",
-        models: "Ertiga / Innova",
-        capacity: "6-7 Passengers",
-        localPrice: 2400,
-        outstationPrice: "16/km",
-        // White SUV
-        image: "/assets/allImages/guptar_ghat.jpg",
-        features: ["Dual AC", "Captain Seats", "Ample Space"]
-    },
-    {
-        id: 4,
-        type: "Premium SUV",
-        models: "Innova Crysta",
-        capacity: "6-7 Passengers",
-        localPrice: 3000,
-        outstationPrice: "20/km",
-        // VIP/Premium look
-        image: "/assets/allImages/naya_ghat.jpg",
-        features: ["Leather Seats", "Ambient Light", "VIP Comfort"]
-    },
-];
+import { taxiRates } from "../data/taxi";
 
 const AyodhyaTaxi = () => {
     return (
@@ -134,8 +87,7 @@ const AyodhyaTaxi = () => {
                                     </div>
 
                                     <Link
-                                        to="/booking"
-                                        state={{ tourId: `taxi-${taxi.type}` }}
+                                        to={`/taxi-booking?vehicleId=${taxi.id}`}
                                         className={`w-full py-3.5 rounded-xl font-bold flex items-center justify-center gap-2 transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 text-sm uppercase tracking-wide
                     ${taxi.popular
                                                 ? 'bg-gradient-to-r from-primary to-orange-600 text-white shadow-primary/30'

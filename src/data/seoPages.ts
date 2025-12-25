@@ -7,8 +7,7 @@ export const seoPages: SEOPage[] = [
         category: "ayodhya-main",
         locationKey: "ayodhya",
         heroImages: [
-            "/assets/seo/ayodhya_ram_mandir.png",
-            "/assets/seo/ayodhya_ghats.jpg"
+            "/assets/seo/ayodhya_ram_mandir.png"
         ],
         metaTitle: "Best Travel Agency in Ayodhya | Reliable Tour & Taxi Services",
         metaDescription: "Looking for the best travel agency in Ayodhya? Sangam Travels offers customized tour packages, premium taxi services, and expert local guides for a divine experience.",
@@ -16,7 +15,7 @@ export const seoPages: SEOPage[] = [
             {
                 title: "Your Trusted Travel Partner in the Holy City",
                 description: "Sangam Travels is dedicated to providing the most comfortable and spiritually enriching journeys in Ayodhya. With years of experience and a deep understanding of the city's heritage, we ensure that your visit to the birthplace of Lord Rama is nothing short of divine. Ayodhya, situated on the banks of the holy river Saryu, holds a history dating back 4000 years, being the heart of the Kosala Kingdom and the setting for the epic Ramayana.",
-                images: ["/assets/seo/ayodhya_ram_mandir.png"]
+                images: ["/assets/allImages/kanak_bhawan.jpg"]
             },
             {
                 title: "Ancient Heritage & Spiritual Legacy",
@@ -32,8 +31,8 @@ export const seoPages: SEOPage[] = [
         category: "ayodhya-main",
         locationKey: "ayodhya",
         heroImages: [
-            "/assets/seo/ayodhya_ram_mandir.png",
-            "/assets/seo/ayodhya_ghats.png"
+            "/assets/allImages/naya_ghat.jpg",
+            "/assets/seo/ayodhya_ghats.jpg"
         ],
         metaTitle: "Ayodhya Tour Packages | Best Spiritual & Sightseeing Deals",
         metaDescription: "Explore our wide range of Ayodhya tour packages. From 1-day darshan tours to extended pilgrimage circuits, find the perfect plan for your family.",
@@ -41,7 +40,7 @@ export const seoPages: SEOPage[] = [
             {
                 title: "Curated Spiritual Itineraries",
                 description: "Our tour packages are designed to cover all major landmarks including the Ram Janmabhoomi, Hanuman Garhi, Kanak Bhawan, and the serene Saryu River Ghats. We provide detailed historical context, explaining how Kanak Bhawan was a gift to Devi Sita and how Guptar Ghat witnessed the Jal Samadhi of Lord Rama.",
-                images: ["/assets/seo/ayodhya_ghats.png"]
+                images: ["/assets/allImages/guptar_ghat.jpg"]
             },
             {
                 title: "The Landmarks of Faith",
@@ -56,10 +55,10 @@ export const seoPages: SEOPage[] = [
         title: "Ayodhya Tour - Experience the Divinity of Lord Rama",
         category: "ayodhya-main",
         locationKey: "ayodhya",
-        heroImages: ["/assets/seo/ayodhya_ram_mandir.png"],
+        heroImages: ["/assets/allImages/tulsi_udyan_temple.jpg"],
         metaTitle: "Ayodhya Tour | Best Local & Outstation Packages",
         metaDescription: "Explore our comprehensive Ayodhya tour options. Visit Ram Mandir, Hanuman Garhi, and the holy Saryu River.",
-        sections: [{ title: "The Soul of Ayodhya", description: "A tour that connects you with the ancient heritage and spiritual energy of the holy city.", images: ["/assets/seo/ayodhya_ram_mandir.png"] }],
+        sections: [{ title: "The Soul of Ayodhya", description: "A tour that connects you with the ancient heritage and spiritual energy of the holy city.", images: ["/assets/allImages/dwarikadhessh_temple.jpg"] }],
         tourId: "ayodhya-darshan-2d1n"
     },
     {
@@ -68,8 +67,8 @@ export const seoPages: SEOPage[] = [
         category: "taxi-services",
         locationKey: "ayodhya",
         heroImages: [
-            "/assets/seo/ayodhya_taxi.png",
-            "/assets/seo/ayodhya_ram_mandir.png"
+            "/assets/allImages/swift_dzire1.jpeg",
+            "/assets/allImages/tour_img2.jpeg"
         ],
         metaTitle: "Taxi Booking in Ayodhya | Affordable Cab & Car Rental Service",
         metaDescription: "Book a taxi in Ayodhya for local sightseeing, airport transfers, and outstation trips. Clean cars, verified drivers, and transparent pricing.",
@@ -77,7 +76,7 @@ export const seoPages: SEOPage[] = [
             {
                 title: "Hassle-Free Local & Outstation Taxi Service",
                 description: "Whether you're visiting the Ram Mandir or need a drop to the Ayodhya Airport, our taxi service is available 24/7. We offer a variety of vehicles including Swift Dzire, Innova Crysta, and Tempo Travellers.",
-                images: ["/assets/seo/ayodhya_taxi.png"]
+                images: ["/assets/allImages/switf_dzire2.jpeg"]
             }
         ],
         tourId: "taxi-sedan"
@@ -90,7 +89,7 @@ export const seoPages: SEOPage[] = [
         heroImages: ["/assets/allImages/naya_ghat.jpg"],
         metaTitle: "Tour in Ayodhya | Best Itinerary for Ram Mandir",
         metaDescription: "Plan your tour in Ayodhya with Sangam Travels. We offer the best local sightseeing and spiritual experiences.",
-        sections: [{ title: "Comprehensive Tour", description: "From Saryu Aarti to Ram Janmabhoomi Darshan.", images: ["/assets/allImages/guptar_ghat.jpg"] }],
+        sections: [{ title: "Comprehensive Tour", description: "From Saryu Aarti to Ram Janmabhoomi Darshan.", images: ["/assets/allImages/darbhanga_ghat.jpg"] }],
         tourId: "ayodhya-darshan-2d1n"
     },
     {
@@ -98,10 +97,10 @@ export const seoPages: SEOPage[] = [
         title: "Best Travel Agency for Ayodhya - Professional Tour Guides",
         category: "ayodhya-main",
         locationKey: "ayodhya",
-        heroImages: ["/assets/seo/ayodhya_ram_mandir.png"],
+        heroImages: ["/assets/allImages/bharat_temple.jpg"],
         metaTitle: "Best Travel Agency for Ayodhya Tours | Sangam Travels",
         metaDescription: "Rated as the best travel agency for Ayodhya trips. Our expert guides ensure a seamless spiritual journey.",
-        sections: [{ title: "Expert Guides", description: "Our local experts bring the history of Ayodhya to life.", images: ["/assets/seo/ayodhya_ram_mandir.png"] }],
+        sections: [{ title: "Expert Guides", description: "Our local experts bring the history of Ayodhya to life.", images: ["/assets/allImages/sankat_mochan_hanuman_mandir.jpg"] }],
         tourId: "ayodhya-darshan-2d1n"
     },
     {
@@ -142,10 +141,10 @@ export const seoPages: SEOPage[] = [
         title: "Varanasi Ganga Aarti Tour - Evening Spiritual Experience",
         category: "cities",
         locationKey: "varanasi",
-        heroImages: ["/assets/seo/varanasi_ghats.png"],
+        heroImages: ["/assets/seo/varanasi_ghats.jpg"],
         metaTitle: "Varanasi Ganga Aarti Tour | Best Boat View Booking",
         metaDescription: "Witness the magnificent evening Ganga Aarti in Varanasi. Boat rides and guided temple tours included.",
-        sections: [{ title: "Glimpse of Eternity", description: "Experience the magic of thousands of diyas and rhythmic chants on the banks of the Ganges.", images: ["/assets/seo/varanasi_ghats.png"] }],
+        sections: [{ title: "Glimpse of Eternity", description: "Experience the magic of thousands of diyas and rhythmic chants on the banks of the Ganges.", images: ["/assets/seo/dashawashmedh_ghat.jpg"] }],
         tourId: "varanasi-ganga-aarti-3d2n"
     },
     {
@@ -172,10 +171,10 @@ export const seoPages: SEOPage[] = [
         title: "Complete Ayodhya Darshan Package - 1 Day & 2 Day Tours",
         category: "ayodhya-main",
         locationKey: "ayodhya",
-        heroImages: ["/assets/seo/ayodhya_ram_mandir.png"],
+        heroImages: ["/assets/seo/hanuman_garhi.jpeg"],
         metaTitle: "Ayodhya Darshan Package | Best Temple Tour Itinerary",
         metaDescription: "Book the most comprehensive Ayodhya darshan package. Visit    mabhoomi, Hanuman Garhi, and more.",
-        sections: [{ title: "Temple Tours", description: "Guided darshan of all major temples in Ayodhya.", images: ["/assets/seo/ayodhya_ram_mandir.png"] }],
+        sections: [{ title: "Temple Tours", description: "Guided darshan of all major temples in Ayodhya.", images: ["/assets/allImages/hanuman_garhi2.jpg"] }],
         tourId: "ayodhya-darshan-2d1n"
     },
     {
@@ -183,7 +182,7 @@ export const seoPages: SEOPage[] = [
         title: "Special Ram Mandir Tour Package Ayodhya",
         category: "ayodhya-main",
         locationKey: "ayodhya",
-        heroImages: ["/assets/seo/ayodhya_ram_mandir.png"],
+        heroImages: ["/assets/seo/ram_janmbhoomi.jpg"],
         metaTitle: "Ram Mandir Tour Package Ayodhya | Special Darshan",
         metaDescription: "Exclusive tour package for Ram Mandir Darshan in Ayodhya.",
         sections: [
@@ -195,7 +194,7 @@ export const seoPages: SEOPage[] = [
             {
                 title: "Sacred Surroundings",
                 description: "Complete your spiritual journey with visits to Kanak Bhawan (Sone-ka-Mandir) and the holy Saryu River, where the morning and evening Aarti create a divine atmosphere.",
-                images: ["/assets/seo/ayodhya_ghats.png"]
+                images: ["/assets/seo/saryu_ghats.jpg"]
             }
         ],
         tourId: "ayodhya-darshan-2d1n"
@@ -205,10 +204,10 @@ export const seoPages: SEOPage[] = [
         title: "Best Taxi Service in Ayodhya - Local & Outstation",
         category: "taxi-services",
         locationKey: "ayodhya",
-        heroImages: ["/assets/seo/ayodhya_taxi.png"],
+        heroImages: ["/assets/allImages/innova.jpeg"],
         metaTitle: "Ayodhya Taxi Service | Reliable Cabs in Ayodhya",
         metaDescription: "Safe and affordable taxi service in Ayodhya for all your travel needs.",
-        sections: [{ title: "Premium Fleet", description: "Our taxis are clean, well-maintained, and driven by professionals.", images: ["/assets/seo/ayodhya_taxi.png"] }],
+        sections: [{ title: "Premium Fleet", description: "Our taxis are clean, well-maintained, and driven by professionals.", images: ["/assets/allImages/innova2.jpeg"] }],
         tourId: "taxi-sedan"
     },
     {
@@ -216,10 +215,10 @@ export const seoPages: SEOPage[] = [
         title: "Ayodhya Airport Pickup & Drop Taxi Service",
         category: "taxi-services",
         locationKey: "ayodhya",
-        heroImages: ["/assets/seo/ayodhya_taxi.png"],
+        heroImages: ["/assets/allImages/swift_dzire1.jpeg"],
         metaTitle: "Ayodhya Airport Taxi | Pickup & Drop Services",
         metaDescription: "On-time airport pickup and drop services at Ayodhya Airport.",
-        sections: [{ title: "Reliability", description: "Never miss a flight with our punctual airport transfers.", images: ["/assets/seo/ayodhya_taxi.png"] }],
+        sections: [{ title: "Reliability", description: "Never miss a flight with our punctual airport transfers.", images: ["/assets/allImages/switf_dzire2.jpeg"] }],
         tourId: "taxi-sedan"
     },
     {
@@ -227,10 +226,10 @@ export const seoPages: SEOPage[] = [
         title: "Tempo Traveller Booking in Ayodhya for Group Tours",
         category: "taxi-services",
         locationKey: "ayodhya",
-        heroImages: ["/assets/allImages/prayagraj_img5.jpg"],
+        heroImages: ["/assets/allImages/tempo_traveller1.jpeg"],
         metaTitle: "Tempo Traveller in Ayodhya | Group Travel Booking",
         metaDescription: "Book luxury tempo travellers in Ayodhya for family and group tours.",
-        sections: [{ title: "Group Comfort", description: "Spacious and comfortable tempo travellers for up to 20 pax.", images: ["/assets/allImages/prayagraj_img5.jpg"] }],
+        sections: [{ title: "Group Comfort", description: "Spacious and comfortable tempo travellers for up to 20 pax.", images: ["/assets/allImages/tempo_traveller2.jpeg"] }],
         tourId: "tempo-traveller"
     },
     {
@@ -271,10 +270,10 @@ export const seoPages: SEOPage[] = [
         title: "Kashi Vishwanath Tour Package - Varanasi Pilgrimage",
         category: "cities",
         locationKey: "varanasi",
-        heroImages: ["/assets/seo/varanasi_ghats.png"],
+        heroImages: ["/assets/seo/varanasi_ghats.jpg"],
         metaTitle: "Kashi Vishwanath Tour Package | Varanasi Darshan",
         metaDescription: "Hassle-free darshan of Kashi Vishwanath temple with Sangam Travels.",
-        sections: [{ title: "Baba Ishwar", description: "Visit the Jyotirlinga in Varanasi.", images: ["/assets/seo/varanasi_ghats.png"] }],
+        sections: [{ title: "Baba Ishwar", description: "Visit the Jyotirlinga in Varanasi.", images: ["/assets/allImages/vishwanath_temple.jpg"] }],
         tourId: "varanasi-ganga-aarti-3d2n"
     },
     {
@@ -329,7 +328,7 @@ export const seoPages: SEOPage[] = [
         heroImages: ["/assets/allImages/hanuman_garhi.jpg"],
         metaTitle: "Ayodhya Tour and Travels | Reliable Local Tour Operators",
         metaDescription: "Expert tour and travel services in Ayodhya. Explore the holy city with Sangam Travels.",
-        sections: [{ title: "Local Expertise", description: "Experience Ayodhya with people who know it best.", images: ["/assets/allImages/kanak_bhawan.jpg"] }],
+        sections: [{ title: "Local Expertise", description: "Experience Ayodhya with people who know it best.", images: ["/assets/allImages/tomb_of_bahu_beham.jpg"] }],
         tourId: "ayodhya-darshan-2d1n"
     },
     {
@@ -337,10 +336,10 @@ export const seoPages: SEOPage[] = [
         title: "Ayodhya Travel Service - Complete Travel Solutions",
         category: "ayodhya-main",
         locationKey: "ayodhya",
-        heroImages: ["/assets/seo/ayodhya_taxi.png"],
+        heroImages: ["/assets/allImages/innova.jpeg"],
         metaTitle: "Ayodhya Travel Service | Cabs, Hotels & Guides",
         metaDescription: "One-stop shop for all your Ayodhya travel needs. Cab booking, hotel assistance and more.",
-        sections: [{ title: "Complete Solutions", description: "From arrival to departure, we handle it all.", images: ["/assets/seo/ayodhya_taxi.png"] }],
+        sections: [{ title: "Complete Solutions", description: "From arrival to departure, we handle it all.", images: ["/assets/allImages/innova.jpg"] }],
         tourId: "taxi-sedan"
     },
     {
@@ -381,10 +380,10 @@ export const seoPages: SEOPage[] = [
         title: "Ayodhya Railway Station Taxi Service - 24/7 Available",
         category: "taxi-services",
         locationKey: "ayodhya",
-        heroImages: ["/assets/seo/ayodhya_taxi.png"],
+        heroImages: ["/assets/allImages/tour_img2.jpeg"],
         metaTitle: "Ayodhya Railway Station Taxi | Instant Pickup & Drop",
         metaDescription: "Book a taxi from Ayodhya Cantt or Ayodhya Junction railway station at the best rates.",
-        sections: [{ title: "Railway Transfers", description: "Taxis ready as soon as you step off the train.", images: ["/assets/seo/ayodhya_taxi.png"] }],
+        sections: [{ title: "Railway Transfers", description: "Taxis ready as soon as you step off the train.", images: ["/assets/allImages/swift_dzire1.jpeg"] }],
         tourId: "taxi-sedan"
     },
     {
@@ -480,10 +479,10 @@ export const seoPages: SEOPage[] = [
         title: "Ayodhya Cab Booking - Secure & Comfortable Rides",
         category: "taxi-services",
         locationKey: "ayodhya",
-        heroImages: ["/assets/seo/ayodhya_taxi.png"],
+        heroImages: ["/assets/allImages/innova2.jpeg"],
         metaTitle: "Ayodhya Cab Booking | Local & Outstation Car Rental",
         metaDescription: "Book a cab in Ayodhya for a stress-free travel experience. Professional drivers and clean vehicles.",
-        sections: [{ title: "Premium Ride", description: "Reliable transportation for your family and group.", images: ["/assets/seo/ayodhya_taxi.png"] }],
+        sections: [{ title: "Premium Ride", description: "Reliable transportation for your family and group.", images: ["/assets/allImages/innova.jpeg"] }],
         tourId: "taxi-sedan"
     },
     {
@@ -491,10 +490,10 @@ export const seoPages: SEOPage[] = [
         title: "Ayodhya to Varanasi Taxi - Competitive One-Way Rates",
         category: "taxi-services",
         locationKey: "ayodhya",
-        heroImages: ["/assets/seo/varanasi_ghats.png"],
+        heroImages: ["/assets/allImages/tour_img5.jpeg"],
         metaTitle: "Ayodhya to Varanasi Taxi | Intercity Cab Service",
         metaDescription: "Comfortable taxi service from the birthplace of Rama to the city of Kashi. Best rates for intercity travel.",
-        sections: [{ title: "Intercity Connection", description: "Smooth travel between the two most sacred cities in UP.", images: ["/assets/seo/varanasi_ghats.png"] }],
+        sections: [{ title: "Intercity Connection", description: "Smooth travel between the two most sacred cities in UP.", images: ["/assets/allImages/tour_img4.jpeg"] }],
         tourId: "taxi-sedan"
     },
     {
@@ -535,10 +534,10 @@ export const seoPages: SEOPage[] = [
         title: "Guided Tour for Ram Mandir Ayodhya - Experience Every Detail",
         category: "ayodhya-main",
         locationKey: "ayodhya",
-        heroImages: ["/assets/seo/ayodhya_ram_mandir.png"],
+        heroImages: ["/assets/seo/ram_janmbhoomi.jpg"],
         metaTitle: "Guided Tour for Ram Mandir Ayodhya | Local Expert Guides",
         metaDescription: "Don't just visit, experience. Our local guides tell you the stories and history behind the grand Ram Mandir.",
-        sections: [{ title: "Expert Guidance", description: "Enrich your visit with historical and spiritual insights from our certified guides.", images: ["/assets/seo/ayodhya_ram_mandir.png"] }],
+        sections: [{ title: "Expert Guidance", description: "Enrich your visit with historical and spiritual insights from our certified guides.", images: ["/assets/seo/kanak_bhawan.jpg"] }],
         tourId: "ayodhya-darshan-2d1n"
     },
     {
@@ -557,10 +556,10 @@ export const seoPages: SEOPage[] = [
         title: "Ayodhya Tourism Service - Official Content & Planning",
         category: "ayodhya-main",
         locationKey: "ayodhya",
-        heroImages: ["/assets/seo/ayodhya_ram_mandir.png"],
+        heroImages: ["/assets/seo/ayodhya_ghats.jpg"],
         metaTitle: "Ayodhya Tourism Service | Expert Local Guides & Plans",
         metaDescription: "Comprehensive tourism services in the holy city of Ayodhya. Local guides, temple planning and more.",
-        sections: [{ title: "Tourism Experts", description: "Navigating your path through the divine heritage of Ayodhya.", images: ["/assets/seo/ayodhya_ram_mandir.png"] }],
+        sections: [{ title: "Tourism Experts", description: "Navigating your path through the divine heritage of Ayodhya.", images: ["/assets/allImages/naya_ghat.jpg"] }],
         tourId: "ayodhya-darshan-1d"
     },
     {
@@ -590,10 +589,10 @@ export const seoPages: SEOPage[] = [
         title: "Ayodhya Faizabad Taxi Service - Local Car Hire",
         category: "taxi-services",
         locationKey: "ayodhya",
-        heroImages: ["/assets/seo/ayodhya_taxi.png"],
+        heroImages: ["/assets/allImages/swift_dzire1.jpeg"],
         metaTitle: "Ayodhya Faizabad Taxi Service | Best Rates Cabs",
         metaDescription: "Quick and efficient taxi service connecting Ayodhya and Faizabad.",
-        sections: [{ title: "Twin City Service", description: "Reliable cabs for travel within Ayodhya and Faizabad.", images: ["/assets/seo/ayodhya_taxi.png"] }],
+        sections: [{ title: "Twin City Service", description: "Reliable cabs for travel within Ayodhya and Faizabad.", images: ["/assets/allImages/switf_dzire2.jpeg"] }],
         tourId: "taxi-sedan"
     },
     {
@@ -601,10 +600,10 @@ export const seoPages: SEOPage[] = [
         title: "Ayodhya Bus Stand Taxi Service - Instant Cabs",
         category: "taxi-services",
         locationKey: "ayodhya",
-        heroImages: ["/assets/seo/ayodhya_taxi.png"],
+        heroImages: ["/assets/allImages/tempo_traveller2.jpeg"],
         metaTitle: "Ayodhya Bus Stand Taxi | Pickup & Drop Service",
         metaDescription: "Get a taxi instantly at Ayodhya bus stand for local or outstation travel.",
-        sections: [{ title: "Bus Stand Pickup", description: "Our drivers are stationed at the bus stand for your convenience.", images: ["/assets/seo/ayodhya_taxi.png"] }],
+        sections: [{ title: "Bus Stand Pickup", description: "Our drivers are stationed at the bus stand for your convenience.", images: ["/assets/allImages/tempo_traveller1.jpeg"] }],
         tourId: "taxi-sedan"
     },
     {
@@ -678,10 +677,10 @@ export const seoPages: SEOPage[] = [
         title: "Ayodhya Temple Tour Package - All Sacred Mandirs",
         category: "ayodhya-main",
         locationKey: "ayodhya",
-        heroImages: ["/assets/seo/ayodhya_ram_mandir.png"],
+        heroImages: ["/assets/seo/nageshwarnath_temple.jpg"],
         metaTitle: "Ayodhya Temple Tour Package | Comprehensive Darshan",
         metaDescription: "Visit every significant temple in Ayodhya with our guided temple tour packages.",
-        sections: [{ title: "Sacred Mandirs", description: "A journey through the divine architecture of Ayodhya.", images: ["/assets/seo/ayodhya_ram_mandir.png"] }],
+        sections: [{ title: "Sacred Mandirs", description: "A journey through the divine architecture of Ayodhya.", images: ["/assets/allImages/durga_temple.jpg"] }],
         tourId: "ayodhya-darshan-1d"
     },
     {
@@ -711,10 +710,10 @@ export const seoPages: SEOPage[] = [
         title: "Ayodhya Car Rental Service - Hire Luxury & Budget Cars",
         category: "taxi-services",
         locationKey: "ayodhya",
-        heroImages: ["/assets/seo/ayodhya_taxi.png"],
+        heroImages: ["/assets/allImages/innova.jpeg"],
         metaTitle: "Ayodhya Car Rental | Self Drive & Driver Included",
         metaDescription: "Need a car in Ayodhya? We offer luxury and budget rentals for every occasion.",
-        sections: [{ title: "Car Hire", description: "Drive yourself or let our professionals handle it.", images: ["/assets/seo/ayodhya_taxi.png"] }],
+        sections: [{ title: "Car Hire", description: "Drive yourself or let our professionals handle it.", images: ["/assets/allImages/innova.jpeg"] }],
         tourId: "taxi-sedan"
     },
     {
@@ -722,10 +721,10 @@ export const seoPages: SEOPage[] = [
         title: "One Way Taxi Ayodhya to Lucknow - Fixed Rates",
         category: "taxi-services",
         locationKey: "ayodhya",
-        heroImages: ["/assets/seo/ayodhya_taxi.png"],
+        heroImages: ["/assets/allImages/tour_img5.jpeg"],
         metaTitle: "Ayodhya to Lucknow Taxi | Flat One Way Rates",
         metaDescription: "Safe and fast one-way taxi service from Ayodhya to Lucknow airport or city.",
-        sections: [{ title: "Lucknow Transfer", description: "Quick connection to the capital city.", images: ["/assets/seo/ayodhya_taxi.png"] }],
+        sections: [{ title: "Lucknow Transfer", description: "Quick connection to the capital city.", images: ["/assets/allImages/tour_img3.jpeg"] }],
         tourId: "taxi-sedan"
     },
     {
@@ -755,10 +754,10 @@ export const seoPages: SEOPage[] = [
         title: "Ayodhya Sightseeing Taxi Service - Full Day Cabs",
         category: "taxi-services",
         locationKey: "ayodhya",
-        heroImages: ["/assets/seo/ayodhya_taxi.png"],
+        heroImages: ["/assets/allImages/innova.jpeg"],
         metaTitle: "Ayodhya Sightseeing Taxi | Local Full Day Tours",
         metaDescription: "Book a dedicated taxi for a full day of sightseeing in Ayodhya.",
-        sections: [{ title: "Dedicated Cabs", description: "Your private car for a day of exploring divine sites.", images: ["/assets/seo/ayodhya_taxi.png"] }],
+        sections: [{ title: "Dedicated Cabs", description: "Your private car for a day of exploring divine sites.", images: ["/assets/allImages/innova2.jpeg"] }],
         tourId: "taxi-sedan"
     },
     {

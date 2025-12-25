@@ -1,6 +1,9 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 export interface Vehicle {
+    id?: number;
     name: string;
     models: string;
     pax: string;
@@ -74,6 +77,7 @@ const VehicleCard: React.FC<VehicleCardProps> = ({ vehicle }) => {
                 </div>
 
                 {/* Pricing */}
+                {/* Pricing */}
                 <div className="space-y-2">
                     <div className="flex justify-between items-center">
                         <span className="text-sm text-gray-600">Ayodhya:</span>
@@ -88,12 +92,19 @@ const VehicleCard: React.FC<VehicleCardProps> = ({ vehicle }) => {
                         <span className="font-semibold text-gray-700">{vehicle.hills}</span>
                     </div>
                 </div>
+
+                <Link
+                    to={`/taxi-booking?vehicleId=${vehicle.id || ""}`}
+                    className="mt-6 w-full py-3 rounded-xl bg-primary text-white font-bold flex items-center justify-center shadow-lg hover:shadow-xl hover:bg-primaryDark transition-all"
+                >
+                    Book This Car
+                </Link>
             </div>
 
             {/* Decorative elements */}
             <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-primary/10 to-transparent rounded-bl-full"></div>
             <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-secondary/10 to-transparent rounded-tr-full"></div>
-        </div>
+        </div >
     );
 };
 

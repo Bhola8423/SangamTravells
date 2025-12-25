@@ -152,7 +152,7 @@ const TourDetails = () => {
                 </div>
 
                 <button
-                  onClick={() => nav("/booking", { state: { tourId: tour.id } })}
+                  onClick={() => nav(`/booking?tourId=${tour.id}`)}
                   className="w-full py-4 bg-primary hover:bg-primaryDark text-white font-bold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all text-lg mt-4"
                 >
                   Proceed to Booking

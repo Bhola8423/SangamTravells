@@ -13,6 +13,8 @@ import AyodhyaTaxi from "./pages/AyodhyaTaxi";
 import Destination from "./pages/Destination";
 import AyodhyaHotels from "./pages/AyodhyaHotels";
 import DynamicSEOPage from "./pages/DynamicSEOPage";
+import Paynow from "./pages/Paynow";
+import TaxiBooking from "./pages/TaxiBooking";
 import Terms from "./pages/Terms";
 import ScrollToTop from "./components/common/ScrollToTop";
 
@@ -34,7 +36,9 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/paynow" element={<Paynow />} />
           <Route path="/booking" element={<Booking />} />
+          <Route path="/taxi-booking" element={<TaxiBooking />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>

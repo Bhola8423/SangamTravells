@@ -1,12 +1,12 @@
 // src/config/site.ts
 const SITE = {
   name: "Sangam Tour & Travels",
-  phone: "+91-95216-09765",
+  phone: "+91 9521609765", // Updated to match legacy site
   emails: [
     "info@sangamtourandtravels.com",
-    "sangamtourandtravels823@gmail.com"
+    "sangamtourandtravels@gmail.com" // Removed test email
   ],
-  address: "H.N 40 Village Post Manapur Dist Ayodhya U.P Pin code 224001",
+  address: "H.No. 40 Manapur, Haripur Jalalbad, Faizabad - Ayodhya, U.P. 224001", // Updated address format
   owner: "SUGANDH SINGH",
   website: "www.sangamtourandtravels.com",
   mapUrl: "https://www.google.com/maps/place/Manapur+Post+Office/@26.7319372,82.0548474,17z/",

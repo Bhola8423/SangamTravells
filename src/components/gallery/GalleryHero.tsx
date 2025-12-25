@@ -6,7 +6,7 @@ const GalleryHero = () => {
       {/* Background with overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1549646877-6e9f166fb9c0?auto=format&fit=crop&w=2000&q=80"
+          src="/assets/allImages/naya_ghat.jpg"
           alt="Travel Memories"
           className="w-full h-full object-cover"
         />

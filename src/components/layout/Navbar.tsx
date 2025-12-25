@@ -17,6 +17,11 @@ interface NavItem {
 const NAV_ITEMS: NavItem[] = [
   { path: "/", label: "Home", end: true },
   { path: "/tours", label: "Tours" },
+
+  {
+    path: "/hotels/ayodhya",
+    label: "Hotels"
+  },
   ...seoCategories.slice(0, 3).map(cat => ({
     path: `/info/${cat.pages[0]?.slug}`,
     label: cat.name,
@@ -34,9 +39,8 @@ const NAV_ITEMS: NavItem[] = [
     }))
   },
   { path: "/gallery", label: "Gallery" },
-  { path: "/about", label: "About" },
+  { path: "/paynow", label: "Pay Now" }, // Added Pay Now
   { path: "/contact", label: "Contact" },
-  { path: "/booking", label: "Book Trip" },
 ];
 
 const Navbar: React.FC = () => {
@@ -74,30 +78,46 @@ const Navbar: React.FC = () => {
         <nav className="hidden md:flex items-center gap-8">
           {NAV_ITEMS.map((item) => (
             <div key={item.path} className="relative group">
-              <NavLink
-                to={item.path}
-                end={item.end}
-                className={({ isActive }: { isActive: boolean }) =>
-                  `text-sm font-medium tracking-wide transition-all duration-300 relative py-2 flex items-center gap-1
-                  ${isActive
-                    ? "text-primary font-semibold"
-                    : isTransparent
+              {item.path === "#" ? (
+                <div
+                  className={`text-sm font-medium tracking-wide transition-all duration-300 relative py-2 flex items-center gap-1 cursor-pointer
+                  ${isTransparent
                       ? "text-white hover:text-white/80"
                       : "text-secondary hover:text-primary"
-                  }`
-                }
-              >
-                {({ isActive }: { isActive: boolean }) => (
-                  <>
-                    {item.label}
-                    {item.dropdown && <span className="text-[10px]">▼</span>}
-                    <span
-                      className={`absolute bottom-0 left-0 h-0.5 w-full bg-primary transition-transform duration-300 origin-left
+                    }`}
+                >
+                  {item.label}
+                  {item.dropdown && <span className="text-[10px]">▼</span>}
+                  <span
+                    className="absolute bottom-0 left-0 h-0.5 w-full bg-primary transition-transform duration-300 origin-left scale-x-0 group-hover:scale-x-100"
+                  />
+                </div>
+              ) : (
+                <NavLink
+                  to={item.path}
+                  end={item.end}
+                  className={({ isActive }: { isActive: boolean }) =>
+                    `text-sm font-medium tracking-wide transition-all duration-300 relative py-2 flex items-center gap-1
+                  ${isActive
+                      ? "text-primary font-semibold"
+                      : isTransparent
+                        ? "text-white hover:text-white/80"
+                        : "text-secondary hover:text-primary"
+                    }`
+                  }
+                >
+                  {({ isActive }: { isActive: boolean }) => (
+                    <>
+                      {item.label}
+                      {item.dropdown && <span className="text-[10px]">▼</span>}
+                      <span
+                        className={`absolute bottom-0 left-0 h-0.5 w-full bg-primary transition-transform duration-300 origin-left
                         ${isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
-                    />
-                  </>
-                )}
-              </NavLink>
+                      />
+                    </>
+                  )}
+                </NavLink>
+              )}
 
               {item.dropdown && (
                 <div className="absolute top-full left-0 w-64 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 overflow-hidden">
@@ -121,7 +141,7 @@ const Navbar: React.FC = () => {
 
         <div className="flex items-center gap-4">
           <a
-            href="https://wa.me/919919405400"
+            href="https://api.whatsapp.com/send?phone=919919405400"
             target="_blank"
             rel="noreferrer"
             className={`hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-medium transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5
