@@ -1,5 +1,6 @@
 // src/pages/Home.tsx
 import React from "react";
+import SEO from "../components/common/SEO";
 import { Link } from "react-router-dom";
 import { FaMapMarkedAlt, FaCar, FaUserShield, FaStar, FaArrowRight } from "react-icons/fa";
 import SectionTitle from "../components/common/SectionTitle";
@@ -38,12 +39,43 @@ const Home: React.FC = () => {
   return (
     <div className="space-y-0 text-secondary">
       {/* HERO SECTION */}
+      <SEO
+        title="Sangam Tour & Travels"
+        description="Your trusted partner for spiritual journeys in Ayodhya, Kashi, and Prayagraj. Best taxi service and tour packages."
+        keywords="Ayodhya Taxi, Kashi Tour, Prayagraj Sangam, Spiritual Tour India"
+        structuredData={[
+          {
+            "@context": "https://schema.org",
+            "@type": "TravelAgency",
+            "name": "Sangam Tour & Travels",
+            "image": "https://sangamtravells.com/logo.png",
+            "url": "https://sangamtravells.com",
+            "telephone": "+919621147099",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Ayodhya",
+              "addressLocality": "Ayodhya",
+              "addressRegion": "UP",
+              "postalCode": "224123",
+              "addressCountry": "IN"
+            }
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Sangam Tour & Travels",
+            "description": "Premium taxi services and tour packages in Ayodhya.",
+            "priceRange": "₹"
+          }
+        ]}
+      />
+      <h1 className="sr-only">Sangam Tour & Travels - Best Ayodhya Taxi Service & Jain Tour Packages</h1>
       <section className="relative h-screen sm:h-[90vh]">
         <HeroCarousel />
       </section>
 
       {/* SEARCH / BOOKING WIDGET (Overlapping Hero) */}
-      <section className="relative z-20 -mt-16 container-custom px-4">
+      <section className="relative z-20 -mt-10 md:-mt-16 container-custom px-4">
         <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 flex flex-col md:flex-row gap-4 items-center justify-between border border-gray-100">
           <div className="flex-1 w-full">
             <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">

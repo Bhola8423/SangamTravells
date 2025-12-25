@@ -1,4 +1,5 @@
 import { FaCar, FaCheckCircle, FaPhoneAlt, FaMapMarkerAlt, FaRupeeSign } from "react-icons/fa";
+import SEO from "../components/common/SEO";
 import { Link } from "react-router-dom";
 import ReadyToPlan from "../components/common/ReadyToPlan";
 import PageHero from "../components/common/PageHero";
@@ -8,6 +9,42 @@ import { taxiRates } from "../data/taxi";
 const AyodhyaTaxi = () => {
     return (
         <>
+            <SEO
+                title="Ayodhya Taxi Service | Cab Booking"
+                description="Reliable taxi services in Ayodhya, Varanasi & Prayagraj. Book clean cars with experienced drivers for Chardham Yatra and local sightseeing."
+                keywords="Ayodhya Taxi Service, Car Rental Ayodhya, Taxi for Ram Mandir, Ayodhya to Varanasi Taxi, Sangam Travels Cab"
+                url="/taxi/ayodhya"
+                structuredData={{
+                    "@context": "https://schema.org",
+                    "@type": "Service",
+                    "serviceType": "Taxi Service",
+                    "provider": {
+                        "@type": "LocalBusiness",
+                        "name": "Sangam Tour & Travels"
+                    },
+                    "areaServed": ["Ayodhya", "Varanasi", "Prayagraj", "Lucknow"],
+                    "hasOfferCatalog": {
+                        "@type": "OfferCatalog",
+                        "name": "Taxi Services",
+                        "itemListElement": [
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Local 8hr/80km Package"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Outstation Taxi"
+                                }
+                            }
+                        ]
+                    }
+                }}
+            />
             <PageHero
                 title={<>Premium <span className="text-accent-yellow">Taxi Services</span> <br /> in Ayodhya</>}
                 subtitle="Explore the holy city with our reliable taxi services. With 2+ years of experience and thousands of satisfied customers, we provide clean cars, professional drivers, and specialized knowledge of Himalayan roads and Chardham routes."

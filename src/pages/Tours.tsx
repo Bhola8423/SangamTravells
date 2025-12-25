@@ -64,7 +64,7 @@ const Tours = () => {
       />
 
       {/* FILTER SECTION (Overlapping) */}
-      <section className="relative z-20 -mt-24 pb-12 px-4 md:px-0">
+      <section className="relative z-20 -mt-12 md:-mt-24 pb-12 px-4 md:px-0">
         <div className="container-custom">
           <TourFilters
             filters={filters}

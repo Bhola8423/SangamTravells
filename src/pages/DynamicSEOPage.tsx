@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams, Navigate, Link } from "react-router-dom";
+import SEO from "../components/common/SEO";
 import Slider from "react-slick";
 import { FaCheckCircle, FaChevronLeft, FaChevronRight, FaArrowRight } from "react-icons/fa";
 import { seoPages, seoCategories } from "../data/seoPages";
@@ -38,9 +39,23 @@ const DynamicSEOPage: React.FC = () => {
     };
 
     return (
-        <div className="bg-white">
+        <div className="bg-white overflow-x-hidden">
+            <SEO
+                title={page.metaTitle || page.title}
+                description={page.metaDescription}
+                url={`/info/${page.slug}`}
+                keywords={`${page.title}, Ayodhya Tourism, ${page.locationKey || 'Ayodhya'} Tour`}
+            />
+
             {/* HERO CAROUSEL */}
             <section className="relative h-[60vh] md:h-[80vh] overflow-hidden">
+                <div className="absolute inset-0 z-10 pointer-events-none flex items-center justify-center">
+                    <div className="container-custom text-center px-4">
+                        <h1 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6 drop-shadow-lg">
+                            {page.title}
+                        </h1>
+                    </div>
+                </div>
                 <Slider {...carouselSettings} className="h-full">
                     {page.heroImages.map((img, idx) => (
                         <div key={idx} className="relative h-[60vh] md:h-[80vh]">
@@ -49,13 +64,7 @@ const DynamicSEOPage: React.FC = () => {
                                 alt={`${page.title} - ${idx + 1}`}
                                 className="w-full h-full object-cover"
                             />
-                            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                                <div className="container-custom text-center px-4">
-                                    <h1 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6 drop-shadow-lg">
-                                        {page.title}
-                                    </h1>
-                                </div>
-                            </div>
+                            <div className="absolute inset-0 bg-black/40"></div>
                         </div>
                     ))}
                 </Slider>
@@ -94,69 +103,73 @@ const DynamicSEOPage: React.FC = () => {
                         </div>
                     ))}
                 </div>
-            </section>
+            </section >
 
             {/* MUST VISIT PLACES */}
-            {mustVisitPlaces.length > 0 && (
-                <section className="py-20 bg-slate-50">
-                    <div className="container-custom">
-                        <div className="text-center mb-16">
-                            <h2 className="text-3xl md:text-5xl font-serif font-bold text-secondary mb-4 italic">
-                                Must visit places in {destinationData?.name}
-                            </h2>
-                            <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
-                        </div>
+            {
+                mustVisitPlaces.length > 0 && (
+                    <section className="py-20 bg-slate-50">
+                        <div className="container-custom">
+                            <div className="text-center mb-16">
+                                <h2 className="text-3xl md:text-5xl font-serif font-bold text-secondary mb-4 italic">
+                                    Must visit places in {destinationData?.name}
+                                </h2>
+                                <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+                            </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            {mustVisitPlaces.map((place, idx) => (
-                                <div key={idx} className="bg-white rounded-3xl overflow-hidden shadow-lg group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                                    <div className="relative h-64 overflow-hidden">
-                                        <img
-                                            src={place.image}
-                                            alt={place.name}
-                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                {mustVisitPlaces.map((place, idx) => (
+                                    <div key={idx} className="bg-white rounded-3xl overflow-hidden shadow-lg group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                                        <div className="relative h-64 overflow-hidden">
+                                            <img
+                                                src={place.image}
+                                                alt={place.name}
+                                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                            />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                        </div>
+                                        <div className="p-8">
+                                            <h3 className="text-2xl font-serif font-bold text-secondary mb-3 group-hover:text-primary transition-colors">
+                                                {place.name}
+                                            </h3>
+                                            <p className="text-slate-600 leading-relaxed">
+                                                {place.description}
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div className="p-8">
-                                        <h3 className="text-2xl font-serif font-bold text-secondary mb-3 group-hover:text-primary transition-colors">
-                                            {place.name}
-                                        </h3>
-                                        <p className="text-slate-600 leading-relaxed">
-                                            {place.description}
-                                        </p>
-                                    </div>
-                                </div>
-                            ))}
+                                ))}
+                            </div>
                         </div>
-                    </div>
-                </section>
-            )}
+                    </section>
+                )
+            }
 
             {/* VIDEO SHOWCASE (If Available) */}
-            {page.videos && page.videos.length > 0 && (
-                <section className="py-20 bg-slate-50">
-                    <div className="container-custom">
-                        <div className="text-center mb-12">
-                            <h2 className="text-3xl md:text-4xl font-serif font-bold text-secondary">Video Experience</h2>
-                            <p className="text-slate-500 mt-2">Glimpses of the divine aura and our services</p>
+            {
+                page.videos && page.videos.length > 0 && (
+                    <section className="py-20 bg-slate-50">
+                        <div className="container-custom">
+                            <div className="text-center mb-12">
+                                <h2 className="text-3xl md:text-4xl font-serif font-bold text-secondary">Video Experience</h2>
+                                <p className="text-slate-500 mt-2">Glimpses of the divine aura and our services</p>
+                            </div>
+                            <div className="grid md:grid-cols-2 gap-8">
+                                {page.videos.map((vid, idx) => (
+                                    <div key={idx} className="aspect-video rounded-3xl overflow-hidden shadow-2xl relative group bg-black">
+                                        <iframe
+                                            title={`Video ${idx}`}
+                                            src={vid}
+                                            className="w-full h-full"
+                                            frameBorder="0"
+                                            allowFullScreen
+                                        />
+                                    </div>
+                                ))}
+                            </div>
                         </div>
-                        <div className="grid md:grid-cols-2 gap-8">
-                            {page.videos.map((vid, idx) => (
-                                <div key={idx} className="aspect-video rounded-3xl overflow-hidden shadow-2xl relative group bg-black">
-                                    <iframe
-                                        title={`Video ${idx}`}
-                                        src={vid}
-                                        className="w-full h-full"
-                                        frameBorder="0"
-                                        allowFullScreen
-                                    />
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-            )}
+                    </section>
+                )
+            }
 
             {/* CTA SECTION */}
             <section className="py-20 bg-primary text-white">
@@ -175,27 +188,29 @@ const DynamicSEOPage: React.FC = () => {
             </section>
 
             {/* RELATED PAGES / CATEGORY MENU */}
-            {relatedPages.length > 0 && (
-                <section className="py-20 bg-white border-t border-slate-100">
-                    <div className="container-custom">
-                        <div className="text-center mb-12">
-                            <h2 className="text-2xl md:text-3xl font-serif font-bold text-secondary">More in {category?.name}</h2>
-                            <p className="text-slate-500 mt-2">Explore related services and packages</p>
+            {
+                relatedPages.length > 0 && (
+                    <section className="py-20 bg-white border-t border-slate-100">
+                        <div className="container-custom">
+                            <div className="text-center mb-12">
+                                <h2 className="text-2xl md:text-3xl font-serif font-bold text-secondary">More in {category?.name}</h2>
+                                <p className="text-slate-500 mt-2">Explore related services and packages</p>
+                            </div>
+                            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                {relatedPages.map((rp) => (
+                                    <Link
+                                        key={rp.slug}
+                                        to={`/info/${rp.slug}`}
+                                        className="p-4 rounded-xl border border-slate-200 hover:border-primary hover:text-primary transition-all text-center font-medium bg-slate-50 hover:bg-white hover:shadow-lg"
+                                    >
+                                        {rp.title}
+                                    </Link>
+                                ))}
+                            </div>
                         </div>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                            {relatedPages.map((rp) => (
-                                <Link
-                                    key={rp.slug}
-                                    to={`/info/${rp.slug}`}
-                                    className="p-4 rounded-xl border border-slate-200 hover:border-primary hover:text-primary transition-all text-center font-medium bg-slate-50 hover:bg-white hover:shadow-lg"
-                                >
-                                    {rp.title}
-                                </Link>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-            )}
+                    </section>
+                )
+            }
 
             <ReadyToPlan />
         </div>

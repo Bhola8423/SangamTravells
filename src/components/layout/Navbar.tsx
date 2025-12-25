@@ -166,10 +166,10 @@ const Navbar: React.FC = () => {
       </div>
 
       <div
-        className={`md:hidden absolute top-full left-0 right-0 bg-white shadow-xl transition-all duration-300 origin-top overflow-hidden ${open ? "max-h-screen opacity-100 border-t border-gray-100" : "max-h-0 opacity-0"
+        className={`md:hidden absolute top-full left-0 right-0 bg-white shadow-xl transition-all duration-300 origin-top overflow-hidden flex flex-col ${open ? "max-h-[85vh] opacity-100 border-t border-gray-100" : "max-h-0 opacity-0"
           }`}
       >
-        <nav className="p-6 flex flex-col gap-2">
+        <nav className="p-6 flex flex-col gap-2 overflow-y-auto custom-scrollbar">
           {NAV_ITEMS.map((item) => (
             <div key={item.path} className="border-b border-gray-50 last:border-0 pb-2">
               <NavLink

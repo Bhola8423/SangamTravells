@@ -1,4 +1,5 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
+import SEO from "../components/common/SEO";
 import { tours } from "../data/tours";
 import { FaMapMarkerAlt, FaClock, FaRupeeSign, FaCheckCircle, FaTimesCircle, FaArrowLeft } from "react-icons/fa";
 import EmptyState from "../components/common/EmptyState";
@@ -23,6 +24,24 @@ const TourDetails = () => {
   return (
     <section className="pt-24 pb-16 bg-slate-50 min-h-screen">
       <div className="container-custom">
+        <SEO
+          title={tour.name}
+          description={tour.shortDescription}
+          image={tour.heroImageUrl}
+          url={`/tours/${tour.id}`}
+          structuredData={{
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": tour.name,
+            "description": tour.shortDescription,
+            "image": tour.heroImageUrl,
+            "offers": {
+              "@type": "Offer",
+              "price": tour.priceFrom,
+              "priceCurrency": "INR"
+            }
+          }}
+        />
         {/* Breadcrumb / Back */}
         <Link to="/tours" className="inline-flex items-center gap-2 text-slate-500 hover:text-primary transition-colors mb-6 font-medium">
           <FaArrowLeft /> Back to all tours
